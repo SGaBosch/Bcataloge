@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="[0.0 3.0] !(3.0 3.984375]" identifier="INPUT:Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrq_MaxMotTrq_Val:var" display_name="Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrq_MaxMotTrq_Val"/>
+  <RangeDefinition range="[0.0 31.875] !(31.875 8191.875]" identifier="INPUT:INJECT_vActRetNominalSteeringSpeed:var" display_name="INJECT_vActRetNominalSteeringSpeed"/>
+  <RangeDefinition range="![-4096.0 -1500.0) [-1500.0 1500.0] !(1500.0 4095.875]" identifier="INPUT:Rte_ActiveReturn_RP_SteerAngSpd_SteerAngSpd:var" display_name="Rte_ActiveReturn_RP_SteerAngSpd_SteerAngSpd"/>
+  <RangeDefinition range="![-128.0 -1.0) [-1.0 1.0] !(1.0 127.0]" identifier="INPUT:Rte_ActiveReturn_RP_GearSign_GearSign:var" display_name="Rte_ActiveReturn_RP_GearSign_GearSign"/>
+  <RangeDefinition range="[0.0 3.0] !(3.0 3.984375]" identifier="INPUT:Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqAftLoadFac_MaxMotTrqAftLoadFac_Val:var" display_name="Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqAftLoadFac_MaxMotTrqAftLoadFac_Val"/>
+  <RangeDefinition range="[0.0 1.0] !(1.0 63.9990234375]" identifier="INPUT:Rte_ActiveReturn_RP_ActvRetFactors_ActvRetFuncFac:var" display_name="Rte_ActiveReturn_RP_ActvRetFactors_ActvRetFuncFac"/>
+  <RangeDefinition range="![-3276.8 -1000.0) [-1000.0 1000.0] !(1000.0 3276.7]" identifier="INPUT:Rte_ActiveReturn_RP_SteerAng_SteerAng:var" display_name="Rte_ActiveReturn_RP_SteerAng_SteerAng"/>
+  <RangeDefinition range="[0.0 1.0] !(1.0 63.9990234375]" identifier="INPUT:Rte_ActiveReturn_RP_ActvRetFactors_ActvRetSpdFac:var" display_name="Rte_ActiveReturn_RP_ActvRetFactors_ActvRetSpdFac"/>
+  <RangeDefinition range="[0.0 3.0] !(3.0 63.9990234375]" identifier="INPUT:Rte_Irv_ActiveReturn_IRV_MotTrqGain:var" display_name="Rte_Irv_ActiveReturn_IRV_MotTrqGain"/>
+  <RangeDefinition range="![-32.0 -25.0) [-25.0 25.0] !(25.0 31.9990234375]" identifier="INPUT:Rte_ActiveReturn_RP_DrvrTrq_DrvrTrq:var" display_name="Rte_ActiveReturn_RP_DrvrTrq_DrvrTrq"/>
+  <RangeDefinition range="![0.0 0.009765625) [0.009765625 1.0] !(1.0 63.9990234375]" identifier="INPUT:Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetFilFac_FilFac_Val:var" display_name="Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetFilFac_FilFac_Val"/>
+  <RangeDefinition range="[0.0 1.5] !(1.5 1.9921875]" identifier="INPUT:Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetSteerSpdFact_SteerSpdFact_Val:var" display_name="Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetSteerSpdFact_SteerSpdFact_Val"/>
+  <RangeDefinition range="[0.0] [1.0] [2.0] [3.0] !(3.0 255.0]" identifier="INPUT:Rte_ActiveReturn_RP_SteerAng_SteerAngSt:var" display_name="Rte_ActiveReturn_RP_SteerAng_SteerAngSt"/>
+  <RangeDefinition range="[0.0 25.0] !(25.0 63.9990234375]" identifier="INPUT:INJECT_RetTrqFactDepOnDrvr:var" display_name="INJECT_RetTrqFactDepOnDrvr"/>
+  <RangeDefinition range="[0.0 1.0] !(1.0 1.999969482421875]" identifier="INPUT:Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetSteerSpdGradAftInvld_SteerSpdGradAftInvld_Val:var" display_name="Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetSteerSpdGradAftInvld_SteerSpdGradAftInvld_Val"/>
+  <RangeDefinition range="![0.0 1.0) [1.0 3.0] !(3.0 63.9990234375]" identifier="INPUT:Rte_ActiveReturn_RP_LoadFacRat_LoadFacRat:var" display_name="Rte_ActiveReturn_RP_LoadFacRat_LoadFacRat"/>
+  <RangeDefinition range="[0.0 500.0] !(500.0 1023.984375]" identifier="INPUT:Rte_ActiveReturn_RP_VehSpd_AbsAvgVehSpd:var" display_name="Rte_ActiveReturn_RP_VehSpd_AbsAvgVehSpd"/>
+  <RangeDefinition range="[0.0 25.0] !(25.0 63.9990234375]" identifier="INPUT:INJECT_SteerSpdFactDepOnDrvr:var" display_name="INJECT_SteerSpdFactDepOnDrvr"/>
+  <RangeDefinition range="[0.0 0.02001953125] !(0.02001953125 3.99993896484375]" identifier="INPUT:Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetSteerSpdAmp_SteerSpdAmp_Val:var" display_name="Rte_ActiveReturn_RP_ActvRetProvParameters_Get_ActvRetSteerSpdAmp_SteerSpdAmp_Val"/>
+</RangeDefinitions>

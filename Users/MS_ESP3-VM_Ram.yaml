@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Ram Kumar Ram
+spec:
+  profile:
+    displayName: Ram Kumar Ram (MS/ESP3-VM)
+    email: Ram.RamKumar@bosch.com
+  memberOf: [Steering Functions 4]

@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<MonitorDescriptions>
+	<MonitorDescription>
+		<MonitorIDName>MONID_ACTIVE_RETURN</MonitorIDName>
+		<ShortDescription>Indicates if Motor torque and TBT exceeds the limit</ShortDescription>
+		<ExtendedDescription>Indicate that the fault injection software is being used</ExtendedDescription>
+		<EcuSystemState>Normal; Production; FailOp;</EcuSystemState>
+		<MonitoringCycle>10 ms</MonitoringCycle>
+		<FurtherMonitoringConditions>NA</FurtherMonitoringConditions>
+		<MonitorStatusNotificationToDiagnosticManagement>On changes of the monitoring state (passed, failed).</MonitorStatusNotificationToDiagnosticManagement>
+		<ImpactNotDetectedError>Steering torque will be high ; UAF impacts possible</ImpactNotDetectedError>
+		<PassedDetectionThreshold>NA</PassedDetectionThreshold>
+		<PassedQualificationCondition>NA</PassedQualificationCondition>
+		<FailedDetectionThreshold>If Motor torque is out of range from Safety threshold Depend on vehicle speed or torque Dependon Steering angle ) OR (TBT is above the threshold ( is greater than is equal to 8 Nm) when active return is active)</FailedDetectionThreshold>
+		<FailedQualificationCondition>Monitoring Status is set to FAILED state when FailedDetection Threshold is reached</FailedQualificationCondition>
+		<FaultRecoveryCondition>No Healing is possible for this fault so Active Return functionality will be switched off for the current ignition cycle</FaultRecoveryCondition>
+		<ImpactOnSWC>None</ImpactOnSWC>
+		<SafeStateRequest>Normal</SafeStateRequest>
+		<FreezeFramesProvidedByMonitor>Each element of structure yActRetI_DiagData_gds</FreezeFramesProvidedByMonitor>
+		<Troubleshooting>Evaluate FreezeFrame</Troubleshooting>
+	</MonitorDescription>
+</MonitorDescriptions>

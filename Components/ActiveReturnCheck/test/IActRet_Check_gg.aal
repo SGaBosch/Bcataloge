@@ -1,0 +1,40 @@
+
+__ASTREE_annotation(( /* Block 0 */
+ActRetI_Saturation { +6 if {else: +1 if}} insert before : __ASTREE_assert((MaxMotTrqDepOnSteerAng_Val >= 0 && MaxMotTrqDepOnSteerAng_Val <= 3072));
+ActRetI_Monitoring { +1 if} insert before : __ASTREE_assert((Rte_Inst_ActiveReturnCheck.ActRetI_Mon_RP_TorsBarTrq_TorsBarTrq->value >= -25600 && Rte_Inst_ActiveReturnCheck.ActRetI_Mon_RP_TorsBarTrq_TorsBarTrq->value <= 25600));
+ActRetI_Monitoring { +1 if} insert before : __ASTREE_initialize((Rte_Inst_ActiveReturnCheck.ActRetI_Mon_RP_TorsBarTrq_TorsBarTrq));
+));
+
+__ASTREE_annotation(( /* Block 0 */
+uint8;
+));
+
+__ASTREE_annotation(( /* Block 0 */
+ActRetI_Monitoring { +2 ifs} insert before : __ASTREE_assert((w_AbsTorsionBarTorqueRaw_Mon_ldU16>= 0 && w_AbsTorsionBarTorqueRaw_Mon_ldU16 <= 25600));
+ActRetI_Monitoring { +4 ifs} insert before : __ASTREE_assert((w_AbsSteeringAngleRaw_Mon_ldU16>= 0 && w_AbsSteeringAngleRaw_Mon_ldU16 <= 10000));
+ActRetI_Monitoring { +6 ifs +1 statement} insert before : __ASTREE_assert((m_MaxMotTrq_Mon_ldU16>= 0 && m_MaxMotTrq_Mon_ldU16 <= 3072));
+));
+
+__ASTREE_annotation(( /* Block 0 */
+ActRetI_Saturation { +7 if {else: +1 statement}} insert before : __ASTREE_assert((ActvRetMaxMotTrqMin_ldU16>= 0 && ActvRetMaxMotTrqMin_ldU16 <= 3072)); /* false : The range of mActRet_MaxMotTrqMin_ldU16 is [0 3072] */
+ActRetI_Saturation { +4 ifs} insert after : __ASTREE_assert((AbsSteeringAngle_ldU16>= 0 && AbsSteeringAngle_ldU16 <= 10000)); /* false : The range of AbsSteeringAngle_ldU16 is [0 10000] */
+ActRetI_Saturation { +3 ifs} insert before : __ASTREE_assert((AbsTorsionBarTorque_ldU16>= 0 && AbsTorsionBarTorque_ldU16 <= 25600)); /* false : The range of AbsTorsionBarTorque_ldU16 is [0 25600] */
+));
+
+__ASTREE_annotation(( /* Block 0 */
+ActRetI_Monitoring { +16 statements} insert before : __ASTREE_assert((IRV_ActvRetMaxMotTrqMin>= 0 && IRV_ActvRetMaxMotTrqMin <= 3072)); /* false: The range of IRV_ActvRetMaxMotTrqMin is [0 3072] */
+//ActRetI_Saturation { +6 ifs} insert before : __ASTREE_comment(( 0:4, 0:26, check_uninitialized_variable_use, "The initialisation is done by the RTE.", false));
+));
+
+__ASTREE_annotation(( /* Block 0 */
+uint8;
+ActRetI_Saturation { +3 ifs} insert before : __ASTREE_comment(( 0:4, 0:63, check_controlling_invariant, "Not-Critical.This check is kept for defensive programming.This can be reached in Unit testing.", false)); /*IActRet_Check_gg.c:5957.7-70*/
+ActRetI_Saturation { +5 ifs} insert before : __ASTREE_comment(( 0:4, 0:58, check_controlling_invariant, "Not-Critical.This check is kept for defensive programming.This can be reached in Unit testing.", false)); /*IActRet_Check_gg.c:5984.7-65*/
+ActRetI_Saturation { +3 if {else: +1 statement}} insert before : __ASTREE_comment(( 0:0, 0:65, check_unreachable_code, "Not-Critical.This check is kept for defensive programming.This can be reached in Unit testing.", false)); /*IActRet_Check_gg.c:5963.6-71*/
+ActRetI_Saturation { +5 if {else: +1 statement}} insert before : __ASTREE_comment(( 0:0, 0:32, check_unreachable_code, "Not-Critical.This check is kept for defensive programming.This can be reached in Unit testing.", false)); /*IActRet_Check_gg.c:5990.6-38*/
+));
+
+__ASTREE_annotation(( /* Block 0 */
+"IActRet_Check_gg.c"  insert comment : RULECHECKER_comment( 484:72, 0:27, check_macro_parameter_unparenthesized_expression_strict, "Auto-generated code settings can not be changed. Does not introduce any faulty behaviour.", false);
+"IActRet_Check_gg.c"  insert comment : RULECHECKER_comment( 490:70, 0:25, check_macro_parameter_unparenthesized_expression_strict, "Auto-generated code settings can not be changed. Does not introduce any faulty behaviour.", false);
+));

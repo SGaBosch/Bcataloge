@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Ram Kumar Ram
+spec:
+  profile:
+    displayName: Ram Kumar Ram (VM-EPS/EBW1)
+    email: GanapathiSubramanian.Swaminathan@bosch.com
+  memberOf: [Steering Functions 4]

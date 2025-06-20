@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ValueRuleset>
+  <ParamValueRule OrderNumber="0" ParameterName="ActiveReturnCdp_CalPrm_SteerSpdFactDepOnDrvrA" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// Rule checks related to ActiveReturnCdp_CalPrm_SteerSpdFactDepOnDrvr
+        /// </summary>
+        double ActiveReturnCdp_CalPrm_MaxTBT4ShtDwn = 8.5; /// This paramter has to be replaced manually updated based on ActiveReturnCdp_CalPrm_MaxTBT4ShtDwnA
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        int sizeOfCurveY = parameterValue.GetSizeOfAxis(1);
+        var array = new double[sizeOfCurveX,sizeOfCurveY];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY; j++)
+            {	
+                double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i,j}));
+                array[i,j] = Parameter;
+            }
+                }
+                /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY-1; j++)
+            {	
+                if(array[i,j+1] > array[i,j])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            if((array[i,j] > ActiveReturnCdp_CalPrm_MaxTBT4ShtDwn))
+            {
+                message = "Torque value has been tunned above ActiveReturnCdp_CalPrm_MaxTBT4ShtDwn";
+                return false;
+            }
+            }
+        }
+        for (int i=0; i<sizeOfCurveY; i++)
+        {
+            for (int j=0; j<sizeOfCurveX-1; j++)
+            {	
+                if(array[j+1,i] > array[j,i])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            }
+        }
+        message = "Curve is decreasing";
+        /// extend logic with LASTX in variable "lastx" and return check result as boolean
+        return true;
+        }
+    }
+}]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="1" ParameterName="ActiveReturnCdp_CalPrm_SteerSpdFactDepOnDrvrB" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// Rule checks related to ActiveReturnCdp_CalPrm_SteerSpdFactDepOnDrvr
+        /// </summary>
+        double ActiveReturnCdp_CalPrm_MaxTBT4ShtDwn = 8.5; /// This paramter has to be replaced manually updated based on ActiveReturnCdp_CalPrm_MaxTBT4ShtDwnB
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        int sizeOfCurveY = parameterValue.GetSizeOfAxis(1);
+        var array = new double[sizeOfCurveX,sizeOfCurveY];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY; j++)
+            {	
+                double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i,j}));
+                array[i,j] = Parameter;
+            }
+                }
+                /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY-1; j++)
+            {	
+                if(array[i,j+1] > array[i,j])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            if((array[i,j] > ActiveReturnCdp_CalPrm_MaxTBT4ShtDwn))
+            {
+                message = "Torque value has been tunned above ActiveReturnCdp_CalPrm_MaxTBT4ShtDwn";
+                return false;
+            }
+            }
+        }
+        for (int i=0; i<sizeOfCurveY; i++)
+        {
+            for (int j=0; j<sizeOfCurveX-1; j++)
+            {	
+                if(array[j+1,i] > array[j,i])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            }
+        }
+        message = "Curve is decreasing";
+        /// extend logic with LASTX in variable "lastx" and return check result as boolean
+        return true;
+        }
+    }
+}]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="2" ParameterName="ActiveReturnCdp_CalPrm_SteerSpdFactDepOnDrvrC" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// Rule checks related to ActiveReturnCdp_CalPrm_SteerSpdFactDepOnDrvr
+        /// </summary>
+        double ActiveReturnCdp_CalPrm_MaxTBT4ShtDwn = 8.5; /// This paramter has to be replaced manually updated based on ActiveReturnCdp_CalPrm_MaxTBT4ShtDwnC
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        int sizeOfCurveY = parameterValue.GetSizeOfAxis(1);
+        var array = new double[sizeOfCurveX,sizeOfCurveY];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY; j++)
+            {	
+                double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i,j}));
+                array[i,j] = Parameter;
+            }
+                }
+                /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY-1; j++)
+            {	
+                if(array[i,j+1] > array[i,j])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            if((array[i,j] > ActiveReturnCdp_CalPrm_MaxTBT4ShtDwn))
+            {
+                message = "Torque value has been tunned above ActiveReturnCdp_CalPrm_MaxTBT4ShtDwn";
+                return false;
+            }
+            }
+        }
+        for (int i=0; i<sizeOfCurveY; i++)
+        {
+            for (int j=0; j<sizeOfCurveX-1; j++)
+            {	
+                if(array[j+1,i] > array[j,i])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            }
+        }
+        message = "Curve is decreasing";
+        /// extend logic with LASTX in variable "lastx" and return check result as boolean
+        return true;
+        }
+    }
+}]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="3" ParameterName="ActiveReturnCdp_CalPrm_RetTrqFactDepOnDrvrA" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// GETLASTX
+        /// </summary>
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        int sizeOfCurveY = parameterValue.GetSizeOfAxis(1);
+        var array = new double[sizeOfCurveX,sizeOfCurveY];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY; j++)
+            {	
+                double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i,j}));
+                array[i,j] = Parameter;
+            }
+                }
+                /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY-1; j++)
+            {	
+                if(array[i,j+1] > array[i,j])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            }
+        }
+        for (int i=0; i<sizeOfCurveY; i++)
+        {
+            for (int j=0; j<sizeOfCurveX-1; j++)
+            {	
+                if(array[j+1,i] > array[j,i])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            }
+        }
+        message = "Curve is decreasing";
+        /// extend logic with LASTX in variable "lastx" and return check result as boolean
+        return true;
+        }
+    }
+}
+]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="4" ParameterName="ActiveReturnCdp_CalPrm_RetTrqFactDepOnDrvrB" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// GETLASTX
+        /// </summary>
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        int sizeOfCurveY = parameterValue.GetSizeOfAxis(1);
+        var array = new double[sizeOfCurveX,sizeOfCurveY];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY; j++)
+            {	
+                double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i,j}));
+                array[i,j] = Parameter;
+            }
+                }
+                /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY-1; j++)
+            {	
+                if(array[i,j+1] > array[i,j])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            }
+        }
+        for (int i=0; i<sizeOfCurveY; i++)
+        {
+            for (int j=0; j<sizeOfCurveX-1; j++)
+            {	
+                if(array[j+1,i] > array[j,i])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            }
+        }
+        message = "Curve is decreasing";
+        /// extend logic with LASTX in variable "lastx" and return check result as boolean
+        return true;
+        }
+    }
+}
+]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="5" ParameterName="ActiveReturnCdp_CalPrm_RetTrqFactDepOnDrvrC" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// GETLASTX
+        /// </summary>
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        int sizeOfCurveY = parameterValue.GetSizeOfAxis(1);
+        var array = new double[sizeOfCurveX,sizeOfCurveY];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY; j++)
+            {	
+                double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i,j}));
+                array[i,j] = Parameter;
+            }
+                }
+                /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            for (int j=0; j<sizeOfCurveY-1; j++)
+            {	
+                if(array[i,j+1] > array[i,j])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            }
+        }
+        for (int i=0; i<sizeOfCurveY; i++)
+        {
+            for (int j=0; j<sizeOfCurveX-1; j++)
+            {	
+                if(array[j+1,i] > array[j,i])
+                {
+                    message = "Curve is not decreasing";
+                    return false;
+                }
+            }
+        }
+        message = "Curve is decreasing";
+        /// extend logic with LASTX in variable "lastx" and return check result as boolean
+        return true;
+        }
+    }
+}
+]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="6" ParameterName="ActiveReturnCdp_CalPrm_MaxMotTrqDepOnSteerAngA" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// Check if curve is increasing
+        /// </summary>
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        var array = new double[sizeOfCurveX];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i}));
+            array[i] = Parameter;
+        }
+        /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX-1; i++)
+        {	
+            if(array[i+1] < array[i])
+            {
+                message = "Curve is not increasing";
+                return false;
+            }
+        }
+        message = "Curve is increasing";
+        return true;
+        }
+    }
+}
+]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="7" ParameterName="ActiveReturnCdp_CalPrm_MaxMotTrqDepOnSteerAngB" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// Check if curve is increasing
+        /// </summary>
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        var array = new double[sizeOfCurveX];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i}));
+            array[i] = Parameter;
+        }
+        /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX-1; i++)
+        {	
+            if(array[i+1] < array[i])
+            {
+                message = "Curve is not increasing";
+                return false;
+            }
+        }
+        message = "Curve is increasing";
+        return true;
+        }
+    }
+}
+]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="8" ParameterName="ActiveReturnCdp_CalPrm_MaxMotTrqDepOnSteerAngC" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// Check if curve is increasing
+        /// </summary>
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        var array = new double[sizeOfCurveX];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i}));
+            array[i] = Parameter;
+        }
+        /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX-1; i++)
+        {	
+            if(array[i+1] < array[i])
+            {
+                message = "Curve is not increasing";
+                return false;
+            }
+        }
+        message = "Curve is increasing";
+        return true;
+        }
+    }
+}
+]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="9" ParameterName="ActiveReturnCdp_CalPrm_MaxMotTrqDepOnVehSpdA" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// Check if curve is decreasing
+        /// </summary>
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        var array = new double[sizeOfCurveX];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i}));
+            array[i] = Parameter;
+        }
+        /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX-1; i++)
+        {	
+            if(array[i+1] < array[i])
+            {
+                message = "Curve is not decreasing";
+                return false;
+            }
+        }
+        message = "Curve is decreasing";
+        return true;
+        }
+    }
+}
+]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="10" ParameterName="ActiveReturnCdp_CalPrm_MaxMotTrqDepOnVehSpdB" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// Check if curve is decreasing
+        /// </summary>
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        var array = new double[sizeOfCurveX];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i}));
+            array[i] = Parameter;
+        }
+        /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX-1; i++)
+        {	
+            if(array[i+1] < array[i])
+            {
+                message = "Curve is not decreasing";
+                return false;
+            }
+        }
+        message = "Curve is decreasing";
+        return true;
+        }
+    }
+}
+]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="11" ParameterName="ActiveReturnCdp_CalPrm_MaxMotTrqDepOnVehSpdC" Intent="Check" Severity="Error">
+    <Rule operator="VcdmCheckRule" Interface="Vector.Cdm.ParameterValueRule.Interfaces.IParameterValueCheckScript" Language="c#"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Vector.Cdm.Runtime.Interop;
+using Vector.Collab.Runtime.Interop;
+using Vector.Easee.Core.System;
+using Vector.Cdm.ParameterValueRule.Interfaces;
+using Application = Vector.Collab.Runtime.Interop.Application;
+using System.IO;
+
+namespace YourCompany.ParameterValueRules
+{
+    public class ParameterValueCheckScript : IParameterValueCheckScript
+    {
+        /// <summary>
+        /// Check if curve is decreasing
+        /// </summary>
+        public bool TestParameterValue(
+        Vector.Collab.Runtime.Interop.Application application,
+        Vector.Cdm.Runtime.Interop.ICDMDomain cdmDomain,
+        int iContext,
+        string parameterName,
+        Vector.Cdm.Runtime.Interop.CDMParameterValue parameterValue,
+        int projectId,
+        int dataSetId,
+        string criterion,
+        string variant,
+        System.Collections.Generic.Dictionary<string, object> aprjCache,
+        System.Collections.Generic.Dictionary<string, object> dstCache,
+        out string message)
+        {
+        int sizeOfCurveX = parameterValue.GetSizeOfAxis(0);
+        var array = new double[sizeOfCurveX];
+        for (int i=0; i<sizeOfCurveX; i++)
+        {
+            double Parameter = Convert.ToDouble(parameterValue.GetValue(new int[]{i}));
+            array[i] = Parameter;
+        }
+        /// Iterate through the array to check if we are decreasing 
+        for (int i=0; i<sizeOfCurveX-1; i++)
+        {	
+            if(array[i+1] < array[i])
+            {
+                message = "Curve is not decreasing";
+                return false;
+            }
+        }
+        message = "Curve is decreasing";
+        return true;
+        }
+    }
+}
+]]></Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="12" ParameterName="ActiveReturnCdp_CalPrm_MaxTBT4ShtDwnA" Intent="Check" Severity="Error">
+    <Rule operator="Expression" expression="phy(X1) &gt;= phy(X2)">
+      <SourceParam>msyAbsTorsionBarTorque_XDU16</SourceParam>
+      <SourceParam>ActiveReturnCdp_CalPrm_MaxTBT4ShtDwnA</SourceParam>
+    </Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="13" ParameterName="ActiveReturnCdp_CalPrm_MaxTBT4ShtDwnB" Intent="Check" Severity="Error">
+    <Rule operator="Expression" expression="phy(X1) &gt;= phy(X2)">
+      <SourceParam>msyAbsTorsionBarTorque_XDU16</SourceParam>
+      <SourceParam>ActiveReturnCdp_CalPrm_MaxTBT4ShtDwnB</SourceParam>
+    </Rule>
+  </ParamValueRule>
+  <ParamValueRule OrderNumber="14" ParameterName="ActiveReturnCdp_CalPrm_MaxTBT4ShtDwnC" Intent="Check" Severity="Error">
+    <Rule operator="Expression" expression="phy(X1) &gt;= phy(X2)">
+      <SourceParam>msyAbsTorsionBarTorque_XDU16</SourceParam>
+      <SourceParam>ActiveReturnCdp_CalPrm_MaxTBT4ShtDwnC</SourceParam>
+    </Rule>
+  </ParamValueRule>
+</ValueRuleset>

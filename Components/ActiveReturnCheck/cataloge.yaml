@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ActiveReturnCheck
+  description: |
+    ActiveReturnCheck is responsible for the saturation and monitoring of the motor torque calculated by ActiveReturn.
+    In case of a deviation detected by the implemented monitoring functionality, the output torque is set to zero.
+    Provides safety limitation of the calculated motor torque depending on vehicle speed and steering angle.
+    If an invalid input signal is detected, the substitution value is chosen to take the lowest value of the appropriate curve.
+    Calibration parameters are provided by the ActiveReturnCdp component.
+spec:
+  type: service
+  lifecycle: production
+  owner: Steering Functions 4
+  dependsOn:
+    - component:ActiveReturn
+    - component:ActiveReturnCdp

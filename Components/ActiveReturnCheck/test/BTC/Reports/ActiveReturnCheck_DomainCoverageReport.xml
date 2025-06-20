@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	  <Report generated="2023-02-09T12:36:12"/>
+	  <DomainCoverage name="ActRetI_DiSwt" percent="100.0%"/>
+	  <DomainCoverage name="ActRetI_Mon" percent="100.0%"/>
+	  <DomainCoverage name="ActRetI_Satn" percent="100.0%"/>
+</root>

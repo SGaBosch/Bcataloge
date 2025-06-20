@@ -1,0 +1,7 @@
+\sgdcc_eps_sdk\epsdrivesw\implementationset\Application\SystemAbstraction\ApplicationInterface\IApplicationInterface_ccfcc_pp.kgt
+\comps_repo\ISW\HardwareLibrary\components\HwLibWrapper\src\HwWrapper.kgt
+\comps_repo\ActiveReturn\components\ActiveReturnCheck\src\IActiveReturnCheck_pp.kgt
+\comps_repo\ActiveReturn\components\ActiveReturnCheck\src\ActRet_Check_pp.kgt
+\comps_repo\ActiveReturn\components\ActiveReturn\src\IActRet_Main_pp.kgt
+\comps_repo\VehicleSpeedCalculation\components\VehicleSpeedCheck\src\IVehSp_Check_pp.kgt
+\comps_repo\TorqueSignalConditioning\components\TorqueSignalConditioningCheck\src\ITrqSigCondCheck_pp.kgt

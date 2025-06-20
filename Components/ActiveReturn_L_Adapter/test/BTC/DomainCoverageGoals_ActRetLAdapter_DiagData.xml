@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="[0.0 500.0] (500.0 1023.984375]" identifier="INPUT:ActvRetAbsMaxSafeVehSpdMon:par" display_name="ActvRetAbsMaxSafeVehSpdMon"/>
+  <RangeDefinition range="[0.0 25.0] (25.0 63.9990234375]" identifier="INPUT:ActvRetAbsTorsBarTrqMon:par" display_name="ActvRetAbsTorsBarTrqMon"/>
+  <RangeDefinition range="[-32.0 -3.0) [-3.0 3.0] (3.0 31.9990234375]" identifier="INPUT:ActvRetMotTrqSatn:par" display_name="ActvRetMotTrqSatn"/>
+  <RangeDefinition range="[0.0 1000.0] (1000.0 6553.5]" identifier="INPUT:ActvRetAbsSteerAngMon:par" display_name="ActvRetAbsSteerAngMon"/>
+</RangeDefinitions>

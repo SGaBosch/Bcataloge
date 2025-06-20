@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Vaishnavi S
+spec:
+  profile:
+    displayName: Vaishnavi S (MS/ESP3-VM)
+    email: S.Vaishnavi2@in.bosch.com
+  memberOf: [Steering Functions 4]

@@ -1,0 +1,52 @@
+// ----------------------------------------------------------------------------
+//  Copyright (c) Robert Bosch Automotive Steering GmbH, Germany
+//                All rights reserved
+// ----------------------------------------------------------------------------
+
+
+sg_funktion ActiveReturn_L_AdapterInterface
+{
+
+   fkt_bezeichner ActiveReturn_L_AdapterInterface
+   {
+      deutsch  "Active Return L Adapter Interface";
+      englisch "Active Return L Adapter Interface";
+   }
+
+// --------------------------------------------------------------------------------------
+// RAM-Groessen
+// --------------------------------------------------------------------------------------
+   ram_groesse mActRetI_MotTrq4Check_xds16
+   {
+      umrechnung     MMOT;
+      codesyntax     csyGLRAMsw;
+      datentyp       sw;
+      minp_w         -3.0;
+      maxp_w         3.0;
+      init_wert      {0};
+   }
+   ram_bezeichner mActRetI_MotTrq4Check_xds16
+   {
+      deutsch  "motor torque of active return component for check";
+      englisch "motor torque of active return component for check";
+   }
+   
+   /*--------------------------------------------------------------------------*/
+   ram_groesse mActRetI_MotorTorque_xds16
+   {
+      umrechnung     MMOT;
+      codesyntax     csyGLRAMREDsw;
+      datentyp       sw;
+      minp_w         -3.0;
+      maxp_w         3.0;
+      init_wert      {0};
+   }
+   ram_bezeichner mActRetI_MotorTorque_xds16
+   {
+      deutsch  "motor torque of active return functionality";
+      englisch "motor torque of active return functionality";
+   }
+
+}
+
+

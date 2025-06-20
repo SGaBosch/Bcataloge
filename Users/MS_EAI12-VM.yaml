@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Huynh Van Hai
+spec:
+  profile:
+    displayName: Huynh Van Hai (MS/EAI12-VM)
+    email: Hai.HuynhVan@vn.bosch.com
+  memberOf: [Steering Functions 4]

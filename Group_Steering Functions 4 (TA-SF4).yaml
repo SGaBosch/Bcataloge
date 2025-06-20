@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Steering Functions 4
+  description: Steering Function 4 (SF4) is one of the scrum team in Application Platform Software (APP) train, which supports Basic Steering Functions.  We are a collocated team from BGSW, with each team member having various competency level.
+spec:
+  type: APP SAFe Teams
+  profile:
+    displayName: TA-SF4
+  children: []
+  members: [
+Swaminathan Ganapathi Subramanian,
+Thachethu Anilkumar Praveen,
+Huynh Van Hai,
+Raghul Gnanaseelan,
+Koushiga Nanthini Marichamy Thangavel,
+Vaishnavi S,
+Ram Kumar Ram,
+]

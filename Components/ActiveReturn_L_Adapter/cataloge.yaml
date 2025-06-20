@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ActiveReturn_L_Adapter
+  description: 
+spec:
+  type: service
+  lifecycle: production
+  owner: Steering Functions 4

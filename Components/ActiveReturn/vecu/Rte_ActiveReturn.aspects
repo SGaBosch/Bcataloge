@@ -1,0 +1,63 @@
+MoveInputFile: True
+Aspects: 
+  -
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^extern VAR\\(IDT_([a-zA-Z0-9-_]*), RTE_DATA\\) Rte_Rx_([0-9-_]*)_([a-zA-Z0-9-_]*);$"
+      ReplacePattern: "extern VAR(IDT_\\1, RTE_DATA) Rte_Rx_\\2_\\3; \nextern uint8 Rte_Rx_\\3_UseStub; \nextern VAR(IDT_\\1, RTE_DATA) Rte_Rx_\\3;"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^extern VAR(boolean, RTE_DATA) Rte_Rx_([0-9-_]*)_SY_([A-Z-_]*);$"
+      ReplacePattern: "extern VAR(boolean, RTE_DATA) Rte_Rx_\\1_SY_\\2; \nextern VAR(boolean, RTE_DATA) Rte_Rx_SY_\\2;"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^extern VAR\\(IDT_([a-zA-Z0-9-_]*), RTE_APPL_DATA\\) Rte_ArPim_([a-zA-Z-_]*)_PIM_([a-zA-Z0-9-_]*);$"
+      ReplacePattern: "extern VAR(IDT_\\1, RTE_APPL_DATA) Rte_ArPim_\\2_PIM_\\3; \nextern uint8 Rte_Rx_\\3_UseStub; \nextern VAR(IDT_\\1, RTE_APPL_DATA) Rte_Rx_\\3;"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^extern VAR\\(IDT_([a-zA-Z0-9-_]*), RTE_DATA\\) Rte_Irv_([a-zA-Z-_]*)_IRV_([a-zA-Z0-9-_]*);$"
+      ReplacePattern: "extern VAR(IDT_\\1, RTE_DATA) Rte_Irv_\\2_IRV_\\3; \nextern uint8 Rte_Rx_\\3_UseStub; \nextern VAR(IDT_\\1, RTE_DATA) Rte_Rx_\\3;"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^extern VAR\\(boolean, RTE_DATA\\) Rte_Rx_([0-9]*)_SY_([A-Z-_]*);$"
+      ReplacePattern: "extern VAR(boolean, RTE_DATA) Rte_Rx_\\1_SY_\\2; \nextern uint8 Rte_Rx_SY_\\2_UseStub; \nextern VAR(boolean, RTE_DATA) Rte_Rx_SY_\\2;"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^#define Rte_Read_RP_([a-zA-Z0-9-_]*)\\( data \\)  \\( \\(\\(\\*\\(data\\)\\) = Rte_Rx_([0-9]*)_([a-zA-Z0-9-_]*)\\),\\(\\(VAR\\(Std_ReturnType, AUTOMATIC\\)\\)RTE_E_OK\\) \\)$"
+      ReplacePattern: "#define Rte_Read_RP_\\1( data )  ( ((*(data)) = Rte_Rx_\\3),((VAR(Std_ReturnType, AUTOMATIC))RTE_E_OK) )"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^#define Rte_Read_RP_SY_([A-Z-_]*)\\( data \\)  \\( \\(\\(\\*\\(data\\)\\) = Rte_Rx_([0-9]*)_SY_([A-Z-_]*)\\),\\(\\(VAR\\(Std_ReturnType, AUTOMATIC\\)\\)RTE_E_OK\\) \\)$"
+      ReplacePattern: "#define Rte_Read_RP_SY_\\1( data )  ( ((*(data)) = Rte_Rx_SY_\\3),((VAR(Std_ReturnType, AUTOMATIC))RTE_E_OK) )"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^#define Rte_Write_PP_([a-zA-Z0-9-_]*)\\( data \\) \\( \\(Rte_Rx_([0-9]*)_([a-zA-Z0-9-_]*) = \\(\\(VAR\\(IDT_([a-zA-Z0-9-_]*), AUTOMATIC\\)\\)data\\)\\), RTE_E_OK \\)$"
+      ReplacePattern: "#define Rte_Write_PP_\\1( data )  if (Rte_Rx_\\3_UseStub == 0){( (Rte_Rx_\\3 = ((VAR(IDT_\\4, AUTOMATIC))data)), RTE_E_OK ); ( (Rte_Rx_\\2_\\3 = ((VAR(IDT_\\4, AUTOMATIC))data)), RTE_E_OK );}"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^#define Rte_Write_PP_SY_([A-Z-_]*)\\( data \\) \\( \\(Rte_Rx_([0-9]*)_SY_([A-Z-_]*) = data\\), RTE_E_OK \\)$"
+      ReplacePattern: "#define Rte_Write_PP_SY_\\1( data )  ( (Rte_Rx_SY_\\3 = data), RTE_E_OK )"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^#define Rte_IrvRead_([a-zA-Z0-9-_]*)_IRV_([a-zA-Z0-9-_]*)\\(\\)  \\( Rte_Irv_([a-zA-Z0-9-_]*)_IRV_([a-zA-Z0-9-_]*) \\)$"
+      ReplacePattern: "#define Rte_IrvRead_\\1_IRV_\\2()  ( Rte_Rx_\\4 )"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^#define Rte_IrvWrite_([a-zA-Z0-9-_]*)_IRV_([a-zA-Z0-9-_]*)\\(data\\) \\( \\(Rte_Irv_([a-zA-Z0-9-_]*)_IRV_([a-zA-Z0-9-_]*) = data\\) \\)$"
+      ReplacePattern: "#define Rte_IrvWrite_\\1_IRV_\\2(data) if (Rte_Rx_\\4_UseStub == 0){ ( (Rte_Rx_\\4 = data) ); ( (Rte_Irv_\\3_IRV_\\4 = data) );}"
+  - 
+    KindOfCSourceExtension: RegExRelacement
+    RegExRelacement:
+      FindPattern: "^#define Rte_Pim_PIM_([a-zA-Z0-9-_]*)\\(\\)  \\( \\(P2VAR\\(IDT_([a-zA-Z0-9-_]*), AUTOMATIC, RTE_APPL_DATA\\)\\) &Rte_ArPim_([a-zA-Z0-9-_]*)_PIM_([a-zA-Z0-9-_]*) \\)$"
+      ReplacePattern: "#define Rte_Pim_PIM_\\1()  ( (P2VAR(IDT_\\2, AUTOMATIC, RTE_APPL_DATA)) &Rte_Rx_\\2 )"
+#End of this file

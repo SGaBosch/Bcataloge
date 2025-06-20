@@ -1,0 +1,5 @@
+
+__ASTREE_annotation(( /* Block 0 */
+ActRetLAdapter_10msEnd { +3 statements} insert before : __ASTREE_comment(( 0:92, 0:9, uninitialized_variable_use, "The initialisation is done by the RTE.", false));
+ActRetLAdapter_10msEnd { +3 statements} insert before : __ASTREE_comment(( 0:92, 0:9, check_uninitialized_variable_use, "The initialisation is done by the RTE.", false));
+));

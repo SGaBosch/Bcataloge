@@ -1,0 +1,132 @@
+// ----------------------------------------------------------------------------
+//  Copyright (c) Robert Bosch Automotive Steering GmbH, Germany
+//                All rights reserved
+// ----------------------------------------------------------------------------
+
+
+sg_funktion ActiveReturnCheck
+{
+   fkt_bezeichner ActiveReturnCheck
+   {
+      deutsch  "ActiveReturnCheck";
+      englisch "ActiveReturnCheck";
+   }
+// -----------------------------------------------------------------------------
+// RAM-Groessen
+// -----------------------------------------------------------------------------
+   ram_groesse mActRet_MotTrqSaturated_xds16
+   {
+      umrechnung 		MMOT;
+      codesyntax 		csyGLRAMREDsw;
+      datentyp 		sw;
+      minp_w         -3;
+      maxp_w         3;
+      init_wertp     {0};
+   }
+   ram_bezeichner mActRet_MotTrqSaturated_xds16
+   {
+      deutsch  "saturated motor torque";
+      englisch "saturated motor torque";
+   }
+// -----------------------------------------------------------------------------
+   ram_groesse fActRet_Disable_xdb
+   {
+      umrechnung 		ZU0;
+      codesyntax 		csyGLRAMREDbit;
+      datentyp 		ubit;
+      minp_w         0;
+      maxp_w         1;
+      init_wertp     {0};
+   }
+   ram_bezeichner fActRet_Disable_xdb
+   {
+      deutsch  "disable flag: in case of a detected error during the monitoring the disable flag is set";
+      englisch "disable flag: in case of a detected error during the monitoring the disable flag is set";
+   }
+// -----------------------------------------------------------------------------
+// ROM-Groessen
+// -----------------------------------------------------------------------------
+   kennlinie mActRet_MaxMotorTorqueDepOnVehSpeed_XAU16
+   {
+      umrechnung                        MMOT;
+      codesyntax                        csyGLSNAKLuw;
+      ablageschema                      AblGLKLuw;
+      adressierschema                   AdSGLDir;
+      eingangsgroesse_x                 vVehSpI_AbsMaxSafeVehSpd_xdu16;
+      anzahl_stuetzstellen_x            5;
+      anzahl_test_stuetzstellen_x       5;
+      minp_x                            0.0;
+      maxp_x                            500.0;
+      minp_w                            0.0;
+      maxp_w                            3.0;
+      test_stuetzstellenp_x             {   0.0, 10.0, 40.00, 90.0, 100.0 };
+      test_wertp                        {   0.5,  0.5,   0.5,  0.5,   0.5 };
+   }
+   kgs_bezeichner mActRet_MaxMotorTorqueDepOnVehSpeed_XAU16
+   {
+      deutsch  "limitation of active return torque depending on vehicle speed";
+      englisch "limitation of active return torque depending on vehicle speed";
+   }
+// -----------------------------------------------------------------------------
+   kennlinie mActRet_MaxMotorTorqueDepOnSteeringAngle_XAU16
+   {
+      umrechnung                        MMOT;
+      codesyntax                        csyGLSNAKLuw;
+      ablageschema                      AblGLKLuw;
+      adressierschema                   AdSGLDir;
+      eingangsgroesse_x                 wApplI_AbsSteeringAngle_xdu16; // this interface is used here just to make the working point visible via XCP
+      anzahl_stuetzstellen_x            5;
+      anzahl_test_stuetzstellen_x       5;
+      minp_x                            0.0;
+      maxp_x                            1000.0;
+      minp_w                            0.0;
+      maxp_w                            3.0;
+      test_stuetzstellenp_x             {   0.0, 100.0, 200.00, 300.0, 500.0 };
+      test_wertp                        {   0.5,  0.5,   0.5,  0.5,   0.5 };
+   }
+   kgs_bezeichner mActRet_MaxMotorTorqueDepOnSteeringAngle_XAU16
+   {
+      deutsch  "limitation of active return torque depending on steering angle";
+      englisch "limitation of active return torque depending on steering angle";
+   }
+// -----------------------------------------------------------------------------
+   kennwert mActRet_MaxTBT4ShutDown_XDU8
+   {
+      umrechnung           TBT_RSH4;
+      codesyntax           csyGLSNAKWub;
+      ablageschema         AblGLKWub;
+      adressierschema      AdSGLDir;
+      minp_w               0;
+      maxp_w               15;
+      test_wertp           8;
+   }
+   kgs_bezeichner mActRet_MaxTBT4ShutDown_XDU8
+   {
+      deutsch  "maximum torsion bar torque to allow active return torque";
+      englisch "maximum torsion bar torque to allow active return torque";
+   }
+}
+
+
+// **************************************************************************************************
+// HISTORY:
+// --------
+// 
+// --------------------------------------------------------------------------------------------------
+// Unter anderem: Endekennung fuer neuen KM-Info-Trigger eingefügt
+// 2017-04-07 Haug Fabian SGD AS-ER/ENK3 * (g52267)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturnCheck\ActRetCheck_pp.kgt@@\main\int_wp_job131317\1
+// --------------------------------------------------------------------------------------------------
+// 2017-04-10 Nayak Prajwal Panduranga SGD AS-ER/ENK2 (g54110)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturnCheck\ActRetCheck_pp.kgt@@\main\1
+// --------------------------------------------------------------------------------------------------
+// 2019-07-16 --- (pry4cob)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturnCheck\ActRetCheck_pp.kgt@@\main\int_wp_job206582\1
+// --------------------------------------------------------------------------------------------------
+// 2019-07-30 Erdmann Dominik (AS-ER/ENO1) (erd1sgm)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturnCheck\ActRet_Check_pp.kgt@@\main\int_wp_job209383\1
+// --------------------------------------------------------------------------------------------------
+// 2019-08-22 Salaris Marianna (AS-ER/ENO1) (SAM4SGM)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturnCheck\ActRet_Check_pp.kgt@@\main\int_wp_job209383\2
+// --------------------------------------------------------------------------------------------------
+// **************************************************************************.HE*********************

@@ -1,0 +1,172 @@
+Calibration/Application Hints
+=============================
+
+This chapter represents the experience in tuning of this function.
+Therefor both universal advice and detailed calibration hints as do`s & don`ts, recommended and must application rules are listed.
+
+
+Universal advice & general method of tuning
+-------------------------------------------
+
+.. image:: ActiveReturnCdp_CalMan_TunMeth.png
+
+#.  Before start tuning, to get a initial feeling of the over all vehicle and chassis characteristics (retunrability behavior, remarkable
+    dependencies upon vehicle speed), ActiveReturn should be switched off. (MaxMotTrq =  0 Nm) 
+
+#.  Gridpoints (x-nodes) of NomSteerSpd_AxisX need to be choosen in respect to the remarkable vehicle speed ranges.
+    Please consider results of Step1. Typical gridpoints are at 0kph (setpoint 0!), parking speed, the specific speed where
+    chassis characteristic changes from non-self-centering to self-centering, speed for country road driving 80-120 kph and approx. vmax.
+
+#.  The Active Return function is a closed loop function realized via P-Controller.
+    During tuning the active return function please differ between variables which are defining the desired returning speed of the steering wheel and
+    the parameters which are influencing the gain of the function.
+
+    The target returning speed of the steering wheel can be defined in dependancy of steering angle, vehicle speed, TBT.
+    The gain defines the "power" of the active return. (dependent on steering angle, vehicle speed, TBT) The gain defines how accurate the target return speed can be achieved.
+    Desired returning speed * gain equals the resulting motor torque of the active return.
+
+    * Active Return gain = 0; Active Return output = 0Nm therefore Active Return is deactivated. Set the gain to 0! 
+      Desired Returning Speed = 0 (for example AR factor = 0% or Returning speed vs. steering angle = 0) means max possible damping (Desired steering velocity =0 -> the active return counteracts to each deviance from 0)
+    * Damping at 0km/h should be realized by 0 °/s target return request and controll gain.
+
+#.  The active return function is a steering feel generating function and should be active in all speed ranges.
+
+#.  ActiveReturn shall be basically used as a steering feel generating function.
+    For safety aspects e.g. damping behavior, the ActiveDamping function shall be used.
+
+#.  TThe higher the gain, the more potential disadvantages may occur: e.g. if internal friction over lifetime drops, the ActiveReturn will 
+    become too dominant, in case of SWA failure (--> 0°) instabilities may occur, steering feel becomes synthetic.
+
+#.  If the hysteresis function is not available, the ActiveReturn function can be used to generate hysteresis feel.
+
+
+
+Interaction with other components
+---------------------------------
+
+* MotorTorqueLimiter
+* Assistance
+* ActiveDamping
+* SteeringController
+* Hysteresis (if applicable)
+* CenterTorqueFeel (if applicable)
+
+
+
+Calibration Parameters - Rules & Hints
+--------------------------------------
+
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|Parameter                       |Description              |Application Rules (must)                                       |poss. consequences of                  |Application Hints (recommended)        |poss. consequences of                |
+|                                |                         |                                                               |inobservance                           |                                       |inobservance                         |
++================================+=========================+===============================================================+=======================================+=======================================+=====================================+
+|NomSteerSpd                     |Return speed in          |NomSteerSpd_AxisX values                                       |Controller instabilities (noise),      |Target value of return speed must fit  |The vehicle is not able to stabilize |
+|                                |dependence upon the      |(corresponding column related to the first point of Axis1)     |steering wheel overshoot due to        |to the vehicle behavior                |itself while hands off situations.   |
+|                                |steering angle for       |shall be used for 0 kph and must be calibrated to              |elastics of tires & chassis            |(especially on u-low).                 |                                     |
+|                                |various vehicle speeds   |a target return speed of "0°/s" for the complete steering range|                                       |                                       |                                     |
+|                                |                         +---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|                                |                         |                                                               |                                       |If center point is too                 |                                     |
+|                                |                         |                                                               |                                       |sharp/unsteady, the trend of the       |                                     |
+|                                |                         |                                                               |                                       |curve can be flattened in the origin   |                                     |
+|                                |                         |                                                               |                                       |(+- 3°) to create a smoother centre    |                                     |
+|                                |                         |                                                               |                                       |point. Be aware: AR on center          |                                     |
+|                                |                         |                                                               |                                       |preciseness becomes less - deadband!   |                                     |
+|                                |                         +---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|                                |                         |                                                               |                                       |The higher the gradient from origin,   |Instability (chatter, oscillations)  |
+|                                |                         |                                                               |                                       |the higher the risk of instabilities   |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
+|                                |                         +---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|                                |                         |                                                               |                                       |Crossing characteristics are just      |Unreasonable and unharmonic          |
+|                                |                         |                                                               |                                       |plausible, if the self-centering       |returnability                        |
+|                                |                         |                                                               |                                       |characteristic of chassis over vehicle |                                     |
+|                                |                         |                                                               |                                       |speed and/or SWA shows                 |                                     |
+|                                |                         |                                                               |                                       |distinctive changes.                   |                                     |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|NomSteerSpd_AxisX               |Speed assignment of the  |                                                               |                                       |Gridpoints (x-nodes) of Axis1          |                                     |
+|                                |target return field      |                                                               |                                       |need to be choosen in respect to the   |                                     |
+|                                |                         |                                                               |                                       |remarkable vehicle speed ranges. Please|                                     |
+|                                |                         |                                                               |                                       |consider results of Step1. Typical     |                                     |
+|                                |                         |                                                               |                                       |gridpoints are at 0kph (setpoint 0!),  |                                     |
+|                                |                         |                                                               |                                       |parking speed, the specific speed where|                                     |
+|                                |                         |                                                               |                                       |chassis characteristic changes from    |                                     |
+|                                |                         |                                                               |                                       |non-self-centering to self-centering,  |                                     |
+|                                |                         |                                                               |                                       |speed for country road driving         |                                     |
+|                                |                         |                                                               |                                       |80-120 kph and approx. vmax.           |                                     |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|NomSteerSpd_AxisY               |Angle assignment of the  |                                                               |                                       |Gridpoints (x-nodes) of Axis2          |                                     |
+|                                |target return field      |                                                               |                                       |need to be choosen in respect to the   |                                     |
+|                                |                         |                                                               |                                       |remarkable steering angle ranges.Please|                                     |
+|                                |                         |                                                               |                                       |consider results of Step1.             |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|SteerSpdFactDepOnDrvr           |Target return speed      |                                                               |                                       |Too steep curves can lead to           |                                     |
+|                                |factor in dependence upon|                                                               |                                       |instabilities.                         |                                     |
+|                                |the steering torque      |                                                               |                                       +---------------------------------------+-------------------------------------+
+|                                |                         |                                                               |                                       |In the normal hand wheel torque range  |A steep gradient in the decribed     |
+|                                |                         |                                                               |                                       |the gradient should be as flat as      |situaion will cause a non-homogeneous|
+|                                |                         |                                                               |                                       |possible                               |steering feel in static curves on    |
+|                                |                         |                                                               |                                       |                                       |a bumpy road.                        |
+|                                |                         |                                                               |                                       +---------------------------------------+-------------------------------------+
+|                                |                         |                                                               |                                       |Reduction over hand wheel torque in    |                                     |
+|                                |                         |                                                               |                                       |combinatio with a high controll gain   |                                     |
+|                                |                         |                                                               |                                       |can be used to generate hyseresis.     |                                     |
+|                                |                         |                                                               |                                       |Gain reductio vs. TBT must be low.     |                                     |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|FilFac                          |Time constant of the     |                                                               |                                       |fast control: values <10ms.            |Torqueripple or max ARTorque can't   |
+|                                |filter for the steering  |                                                               |                                       |Check torqueripple slow control:       |be reached.                          |
+|                                |torque dependency        |                                                               |                                       |values > 10ms check if max ARTorque    |                                     |
+|                                |                         |                                                               |                                       |can be reached.                        |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
+|                                |                         |                                                               |                                       |                                       |                                     |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|SteerSpdFact                    |Target return speed      |                                                               |                                       |                                       |                                     |
+|                                |factor                   |                                                               |                                       |                                       |                                     |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|SteerSpdAmp                     |Control amplification    |                                                               |                                       |Too high amplification values will     |Small changes within the Active      |
+|                                |                         |                                                               |                                       |make the function too dominant.        |Return function will have significant|
+|                                |                         |                                                               |                                       |(recommended values:0,002-0,004 Nm/°/s)|effect on the system reaction.       |
+|                                |                         |                                                               |                                       |                                       |Tuning tends to be more sensitive on |
+|                                |                         |                                                               |                                       |                                       |vehicle and steering gear variation. |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|MotTrqGain                      |Control amplification    |                                                               |                                       |Espacially with high gain the active   |Instability (chatter, oscillations)  |
+|                                |factor in dependence upon|                                                               |                                       |return tends to instability. When      |                                     |
+|                                |the vehicle speed        |                                                               |                                       |instabilities primarily occur during   |                                     |
+|                                |                         |                                                               |                                       |high return activity, the controller   |                                     |
+|                                |                         |                                                               |                                       |gain is temporarily to be calibrated   |                                     |
+|                                |                         |                                                               |                                       |to 0, to check out the influence.      |                                     |
+|                                |                         |                                                               |                                       +---------------------------------------+-------------------------------------+
+|                                |                         |                                                               |                                       |Gain should not be set unreasonable    |Springy feel, vehicle reaction with  |
+|                                |                         |                                                               |                                       |high. Basically to be set just as      |two-phase behavior at constant SWA   |
+|                                |                         |                                                               |                                       |high as to enable returnability.       |                                     |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|RetTrqFactDepOnDrvr             |Reduction of the control |                                                               |                                       |The handwheeltorque depending          |Too steep gradient can enable        |
+|                                |amplification in         |                                                               |                                       |reduction of setpoint and gain         |oscillations caused by TBT           |
+|                                |dependence upon the      |                                                               |                                       |shall not be calibrated too steep.     |variation. Here the calibration of   |
+|                                |steering torque.         |                                                               |                                       |                                       |gradient should be adapted and/or    |
+|                                |                         |                                                               |                                       |be adapted or the filtering            |check possibility to modify the      |
+|                                |                         |                                                               |                                       |FilFac                                 |filtering                            |
+|                                |                         |                                                               |                                       |calibrated according.                  |FilFac.                              |
+|                                |                         |                                                               |                                       +---------------------------------------+-------------------------------------+
+|                                |                         |                                                               |                                       |In combination with                    |                                     |
+|                                |                         |                                                               |                                       |SteerSpdFactDepOnDrvr                  |                                     |
+|                                |                         |                                                               |                                       |hysteresis feel can be generated.      |                                     |
+|                                |                         |                                                               |                                       +---------------------------------------+-------------------------------------+
+|                                |                         |                                                               |                                       |In normal TBT ranges the gradient of   |Too extreem gradient changes in the  |
+|                                |                         |                                                               |                                       |the curve should be as flat as possible|normal TBT driving range, steering   |
+|                                |                         |                                                               |                                       |                                       |feel can be very non-homogeneous     |
+|                                |                         |                                                               |                                       |                                       |while driving a static curve on a    |
+|                                |                         |                                                               |                                       |                                       |bumpy road.                          |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|MaxMotTrq                       |Limitation of the return |                                                               |                                       |                                       |                                     |
+|                                |share                    |                                                               |                                       |                                       |                                     |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|MaxMotTrqAftLoadFac             |Limitation of the return |                                                               |                                       |                                       |                                     |
+|                                |after considering        |                                                               |                                       |                                       |                                     |
+|                                |load factor ratio        |                                                               |                                       |                                       |                                     |
++--------------------------------+-------------------------+---------------------------------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+

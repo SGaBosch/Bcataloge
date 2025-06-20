@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="[-3.0 3.0]" identifier="INPUT:Rte_Irv_ActiveReturnCheck_IRV_ActvRetMotTrqSatn:var" display_name="Rte_Irv_ActiveReturnCheck_IRV_ActvRetMotTrqSatn"/>
+  <RangeDefinition range="[0] [1]" identifier="INPUT:Rte_Irv_ActiveReturnCheck_IRV_ActvRetDi:var" display_name="Rte_Irv_ActiveReturnCheck_IRV_ActvRetDi"/>
+</RangeDefinitions>

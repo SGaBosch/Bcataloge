@@ -1,0 +1,45 @@
+
+__ASTREE_annotation(( /* Block 0 */
+ActRetI_CalcActiveReturnTorque { +3 ifs} insert before : __ASTREE_assert((Aux_ldS32 >= 0 && Aux_ldS32 <= 1048576)); /* false: Variable gets value by RTE function. */
+ActRetI_CalcActiveReturnTorque { +3 ifs} insert before : __ASTREE_assert((RetTrqFactDepOnDrvr_Val >= 0 && RetTrqFactDepOnDrvr_Val <= 1024)); /* false: Variable gets value by RTE function. */
+ActRetI_CalcActiveReturnTorque { +4 ifs} insert before : __ASTREE_assert((Aux_ldS32 >= 0 && Aux_ldS32 <= 1048576)); /* false: Variable gets value by RTE function. */
+ActRetI_CalcActiveReturnTorque { +4 ifs} insert before : __ASTREE_assert((SteerSpdFactDepOnDrvr_Val >= 0 && SteerSpdFactDepOnDrvr_Val <= 1024)); /* false: Variable gets value by RTE function. */
+ActRetI_CalcActiveReturnTorque { +7 ifs +2 statement} insert before : __ASTREE_assert((NomSteerSpd_Val >= 0 && NomSteerSpd_Val <= 12000)); /* false: Variable gets value by RTE function. */
+ActRetI_CalcActiveReturnTorque { +10 ifs +1 statement} insert before : __ASTREE_assert((SteerSpdFact_Val >= 0 && SteerSpdFact_Val <= 192)); /* false: Variable gets value by RTE function. */
+ActRetI_CalcActiveReturnTorque { +4 if {then: +1 statement}} insert before : __ASTREE_assert((FilFac_Val >= 10 && FilFac_Val <= 1024)); /* false: Variable gets value by RTE function. */
+ActRetI_CalcActiveReturnTorque { +10 ifs +1 statement} insert before : __ASTREE_assert((x_FctCoSpeedFact_ldU16 >= 0 && x_FctCoSpeedFact_ldU16 <= 1024));
+ActRetI_CalcActiveReturnTorque { +11 ifs +1 statement} insert before : __ASTREE_assert((xActRet_SteeringSpeedFact_XDU8_Value >= 0 && xActRet_SteeringSpeedFact_XDU8_Value <= 192));
+ActRetI_CalcActiveReturnTorque { +11 ifs +2 statements} insert before : __ASTREE_assert((SteerSpdAmp_Val >= 0 && SteerSpdAmp_Val <= 328)); /* false: Variable gets value by RTE function. */
+ActRetI_CalcActiveReturnTorque { +3 if {then: +1 statement}} insert before : __ASTREE_assert((FilFac_Val >= 10 && FilFac_Val <= 1024)); /* false: Variable gets value by RTE function. */
+//ActRetI_CalcActiveReturnTorque { +14 ifs +1 statement} insert before : __ASTREE_assert((x_GearSign_ldS8 >= -1 && x_GearSign_ldS8 <= 1)); /* false: Variable gets value by RTE function. */
+));
+
+__ASTREE_annotation(( /* Block 0 */
+));
+
+__ASTREE_annotation(( /* Block 0 */
+));
+
+__ASTREE_annotation(( /* Block 0 */
+));
+
+__ASTREE_annotation(( /* Block 0 */
+));
+
+__ASTREE_annotation(( /* Block 0 */
+insert comment : RULECHECKER_comment( "IActRet_Main_gg.c", 380:75, 380:99, check_macro_parameter_unparenthesized_expression_strict, "Because of the too long line, the closing parenthesiz is in next lines.", false);
+insert comment : RULECHECKER_comment( "IActRet_Main_gg.c", 428:71, 428:97, check_macro_parameter_unparenthesized_expression_strict, "Because of the too long line, the closing parenthesiz is in next lines.", false);
+insert comment : RULECHECKER_comment( "IActRet_Main_gg.c", 514:67, 514:83, check_macro_parameter_unparenthesized_expression_strict, "Because of the too long line, the closing parenthesiz is in next lines.", false);
+insert comment : RULECHECKER_comment( "IActRet_Main_gg.c", 874:66, 874:81, check_macro_parameter_unparenthesized_expression_strict, "Because of the too long line, the closing parenthesiz is in next lines.", false);
+));
+
+__ASTREE_annotation(( /* Block 0 */
+//ActRetI_CalcActiveReturnTorque { +14 ifs +1 statement} insert before : __ASTREE_initialize((x_GearSign_ldS8));
+));
+
+__ASTREE_annotation(( /* Block 0 */
+//ActRetI_CalcActiveReturnTorque { +15 if {then: +1 statement}} insert before : __ASTREE_initialize((x_GearSign_ldS8));
+ActRetI_CalcActiveReturnTorque { +41 statements} insert before : __ASTREE_initialize((x_GearSign_ldS8));
+//ActRetI_CalcActiveReturnTorque { +15 if {then: +1 statement}} insert before : __ASTREE_initialize((x_GearSign_ldS8));
+ActRetI_CalcActiveReturnTorque { +14 ifs +1 statement} insert before : __ASTREE_initialize((GearSign));
+));

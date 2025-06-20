@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	  <Report generated="2023-02-09T12:10:10"/>
+	  <DomainCoverage name="ActRetLAdapter_100msStart" percent="100.0%"/>
+	  <DomainCoverage name="ActRetLAdapter_10msEnd" percent="100.0%"/>
+	  <DomainCoverage name="ActRetLAdapter_10msStart" percent="100.0%"/>
+	  <DomainCoverage name="ActRetLAdapter_DiagData" percent="100.0%"/>
+	  <DomainCoverage name="ActRetLAdapter_SetEventEntry" percent="100.0%"/>
+</root>

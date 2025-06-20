@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<RuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Rules>
+    <BaseRule xsi:type="GenericRule">
+      <ViolationRuleTypeDefault>Error</ViolationRuleTypeDefault>
+      <Description>TBT for Shut down should be greater than last x-value of RetTorqueFactDepOnDriver.</Description>
+      <RuleString>B &gt;= GETLASTX(A)</RuleString>
+      <UpperPrecision />
+      <LowerPrecision />
+      <VariantNameLeftSide />
+      <VariantNamesRightSide>
+        <string xsi:nil="true" />
+      </VariantNamesRightSide>
+      <LeftSideName>xActRet_RetTorqueFactDepOnDriver_XAU16</LeftSideName>
+      <DummyConstantsSerialization />
+      <RightSideNames>
+        <string>mActRet_MaxTBT4ShutDown_XDU8</string>
+      </RightSideNames>
+      <ExtendedInput>true</ExtendedInput>
+    </BaseRule>
+    <BaseRule xsi:type="GenericRule">
+      <ViolationRuleTypeDefault>Error</ViolationRuleTypeDefault>
+      <Description>TBT for Shut down should be greater than last x-value of SteerSpeedFactDepOnDriver.</Description>
+      <RuleString>B &gt;= GETLASTX(A) </RuleString>
+      <UpperPrecision />
+      <LowerPrecision />
+      <VariantNameLeftSide />
+      <VariantNamesRightSide>
+        <string xsi:nil="true" />
+      </VariantNamesRightSide>
+      <LeftSideName>xActRet_SteerSpeedFactDepOnDriver_XAU16</LeftSideName>
+      <DummyConstantsSerialization />
+      <RightSideNames>
+        <string>mActRet_MaxTBT4ShutDown_XDU8</string>
+      </RightSideNames>
+      <ExtendedInput>true</ExtendedInput>
+    </BaseRule>
+    <BaseRule xsi:type="CurveRule">
+      <ViolationRuleTypeDefault>Error</ViolationRuleTypeDefault>
+      <Description>allowed motor torque shall be rising with increasing steering angle</Description>
+      <VariantName />
+      <CurveName>mActRet_MaxMotorTorqueDepOnSteeringAngle_XAU16</CurveName>
+      <CurveRuleType>Rising</CurveRuleType>
+    </BaseRule>
+    <BaseRule xsi:type="CurveRule">
+      <ViolationRuleTypeDefault>Error</ViolationRuleTypeDefault>
+      <Description>motor torque shall decrease with increasing vehicle speed</Description>
+      <VariantName />
+      <CurveName>mActRet_MaxMotorTorqueDepOnVehSpeed_XAU16</CurveName>
+      <CurveRuleType>Falling</CurveRuleType>
+    </BaseRule>
+    <BaseRule xsi:type="GenericRule">
+      <ViolationRuleTypeDefault>Error</ViolationRuleTypeDefault>
+      <Description>maximum TBT to measure needs to be greater than or equal to ActRet threshold</Description>
+      <RuleString>A &gt;= B</RuleString>
+      <UpperPrecision />
+      <LowerPrecision />
+      <VariantNamesRightSide>
+        <string xsi:nil="true" />
+      </VariantNamesRightSide>
+      <LeftSideName>msyAbsTorsionBarTorque_XDU16</LeftSideName>
+      <DummyConstantsSerialization />
+      <RightSideNames>
+        <string>mActRet_MaxTBT4ShutDown_XDU8</string>
+      </RightSideNames>
+      <ExtendedInput>true</ExtendedInput>
+    </BaseRule>
+  </Rules>
+  <Name>ActiveReturnCheck</Name>
+</RuleSet>

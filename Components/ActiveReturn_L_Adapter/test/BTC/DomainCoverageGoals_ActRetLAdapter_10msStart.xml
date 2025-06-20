@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="![-32.0 -25.0) [-25.0 25.0] !(25.0 31.9990234375]" identifier="INPUT:mApplI_TorsionBarTorque_xds16:var" display_name="mApplI_TorsionBarTorque_xds16"/>
+  <RangeDefinition range="[0.0] [1.0] [2.0] [3.0] !(3.0 255.0]" identifier="INPUT:sApplI_SteeringAngleState_xdu8:var" display_name="sApplI_SteeringAngleState_xdu8"/>
+  <RangeDefinition range="[0.0] [1.0] [2.0] !(2.0 255.0]" identifier="INPUT:yApplI_ActCharacteristic_xdu8:var" display_name="yApplI_ActCharacteristic_xdu8"/>
+  <RangeDefinition range="![-3276.8 -1000.0) [-1000.0 1000.0] !(1000.0 3276.7]" identifier="INPUT:wApplI_SteeringAngle_xds16:var" display_name="wApplI_SteeringAngle_xds16"/>
+  <RangeDefinition range="[0.0 1.0] !(1.0 63.9990234375]" identifier="INPUT:xFactMinI_ActiveRetSpeedFactor_xdu16:var" display_name="xFactMinI_ActiveRetSpeedFactor_xdu16"/>
+  <RangeDefinition range="![-32.0 -25.0) [-25.0 25.0] !(25.0 31.9990234375]" identifier="INPUT:mApplI_DriverTorque_xds16:var" display_name="mApplI_DriverTorque_xds16"/>
+  <RangeDefinition range="![-4096.0 -1500.0) [-1500.0 1500.0] !(1500.0 4095.875]" identifier="INPUT:vApplI_SteeringAngleSpeed_xds16:var" display_name="vApplI_SteeringAngleSpeed_xds16"/>
+  <RangeDefinition range="![-128.0 -1.0) [-1.0 1.0]! (1.0 127.0]" identifier="INPUT:xApplI_GearSign_xds8:var" display_name="xApplI_GearSign_xds8"/>
+  <RangeDefinition range="[0.0 1.0] !(1.0 63.9990234375]" identifier="INPUT:xFactMinI_ActiveRetFuncFactor_xdu16:var" display_name="xFactMinI_ActiveRetFuncFactor_xdu16"/>
+  <RangeDefinition range="[0.0 500.0] !(500.0 1023.984375]" identifier="INPUT:vVehSpI_AbsMaxSafeVehSpd_xdu16:var" display_name="vVehSpI_AbsMaxSafeVehSpd_xdu16"/>
+  <RangeDefinition range="[0.0 3.0] !(3.0 63.9990234375]" identifier="INPUT:xCompIncFricI_LoadFactorRatio_xdu16:var" display_name="xCompIncFricI_LoadFactorRatio_xdu16"/>
+  <RangeDefinition range="[0.0 500.0] !(500.0 1023.984375]" identifier="INPUT:vVehSpI_AbsAvgVehSpd_xdu16:var" display_name="vVehSpI_AbsAvgVehSpd_xdu16"/>
+</RangeDefinitions>

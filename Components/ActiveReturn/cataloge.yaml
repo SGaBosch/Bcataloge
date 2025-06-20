@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ActiveReturn
+  description: ActiveReturn is a component that controls the return speed of the steering wheel in dependence upon 
+    the steering angle and vehicle speed. It therefore also concerns itself with a small part 
+    of steering damping based on the control. The application of this function is responsible for the 
+    return behavior and the overshoot behavior.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: production
+  owner: Steering Functions 4
+  dependsOn:
+    - resource:https://sourcecode07.dev.bosch.com/projects/ASMPAPP/repos/asmp-dev/browse/comps_repo/ActiveReturn/components/ActiveReturn

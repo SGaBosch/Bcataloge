@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="[0.0 500.0]" identifier="INPUT:Rte_Irv_ActiveReturnCheck_IRV_ActvRetAbsMaxSafeVehSpdSat:var" display_name="Rte_Irv_ActiveReturnCheck_IRV_ActvRetAbsMaxSafeVehSpdSat"/>
+  <RangeDefinition range="[-3.0 3.0]" identifier="INPUT:Rte_Irv_ActiveReturnCheck_IRV_ActvRetMotTrqSatn:var" display_name="Rte_Irv_ActiveReturnCheck_IRV_ActvRetMotTrqSatn"/>
+  <RangeDefinition range="[0.0 25.0]" identifier="INPUT:Rte_Irv_ActiveReturnCheck_IRV_ActvRetAbsTorsBarTrqSat:var" display_name="Rte_Irv_ActiveReturnCheck_IRV_ActvRetAbsTorsBarTrqSat"/>
+  <RangeDefinition range="[0.0 1000.0]" identifier="INPUT:Rte_Irv_ActiveReturnCheck_IRV_ActvRetAbsSteerAngSat:var" display_name="Rte_Irv_ActiveReturnCheck_IRV_ActvRetAbsSteerAngSat"/>
+  <RangeDefinition range="[0.0 15.0]" identifier="INPUT:Rte_ActiveReturnCheck_RP_ActvRetProvParameters_Get_ActvRetMaxTBT4ShtDwn_MaxTBT4ShtDwn_Val:var" display_name="Rte_ActiveReturnCheck_RP_ActvRetProvParameters_Get_ActvRetMaxTBT4ShtDwn_MaxTBT4ShtDwn_Val"/>
+  <RangeDefinition range="[0.0 3.0]" identifier="INPUT:Rte_Irv_ActiveReturnCheck_IRV_ActvRetMaxMotTrqMin:var" display_name="Rte_Irv_ActiveReturnCheck_IRV_ActvRetMaxMotTrqMin"/>
+</RangeDefinitions>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	  <Report generated="2023-02-09T12:21:53"/>
+	  <DomainCoverage name="ActRetCdp_Prov_FilFac" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_MaxMotTrq" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_MaxMotTrqDepOnSteerAng" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_MaxMotTrqDepOnVehSpd" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_MaxTBT4ShtDwn" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_MotTrqGain" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_NomSteerSpd" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_RetTrqFactDepOnDrvr" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_SteerSpdAmp" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_SteerSpdFact" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_SteerSpdFactDepOnDrvr" percent="100%"/>
+	  <DomainCoverage name="ActRetCdp_Prov_SteerSpdGradAftInvld" percent="100%"/>
+</root>

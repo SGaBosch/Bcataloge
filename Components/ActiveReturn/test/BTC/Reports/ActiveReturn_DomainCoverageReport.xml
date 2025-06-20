@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	  <Report generated="2023-02-09T11:49:37"/>
+	  <DomainCoverage name="ActRetI_CalcActvRetTrq" percent="100%"/>
+	  <DomainCoverage name="ActRetI_InterpolCharacteristics" percent="100.0%"/>
+</root>

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ActiveReturnCdp
+  description: |
+    ActiveReturnCdp is a component that is responsible to provide calibration data used in the ActiveReturn functionality.
+    It outputs calibration parameters (constants, curves, maps) to ActiveReturn and ActiveReturnCheck components.
+    Three sets of calibration data exist, selected based on the ActChar signal.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: production
+  owner: Steering Functions 4
+  dependsOn:
+    - component:ActiveReturn
+    - component:ActiveReturnCheck

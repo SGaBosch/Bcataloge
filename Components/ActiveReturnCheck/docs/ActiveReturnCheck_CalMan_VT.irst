@@ -1,0 +1,51 @@
+Calibration/Application Hints
+=============================
+
+
+Universal advice & general method of tuning
+-------------------------------------------
+
+1.The last point of MaxMotTrqDepOnVehSpd curve equals first point of MaxMotTrqDepOnSteerAng curve.
+
+2.The first Point of MaxMotTrqDepOnVehSpd curve equals the last point of MaxMotTrqDepOnSteerAng curve.
+
+3.The MaxMotTrqDepOnSteerAng curve be increasing (not strictly increasing i,e.,two points can have the same values).
+
+4.The MaxMotTrqDepOnVehSpd curve be decreasing (not strictly decreasing i,e.,two points can have the same values).
+
+5.The first point of MaxMotTrqDepOnVehSpd curve and last point of MaxMotTrqDepOnSteerAng curve to be tuned in a way to achieve C0 Controllable limit.
+
+
+Interaction with other components
+---------------------------------
+All mentioned calibration parameters are provided by ActiveReturnCdp component to ActiveReturnCheck component.
+
+Calibration Parameters - Rules & Hints
+--------------------------------------
+
++--------------------------------+-------------------------+---------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|Parameter                       |Description              |Application Rules (must)               |poss. consequences of                  |Application Hints (recommended)        |poss. consequences of                |
+|                                |                         |                                       |inobservance                           |                                       |inobservance                         |
++================================+=========================+=======================================+=======================================+=======================================+=====================================+
+|MaxMotTrqDepOnVehSpd            |limitation of active     |The maximum allowed Active Return      |The Active Return function may not     |The motor-related active return        |                                     |
+|                                |return torque depending  |torque is limited to the value         |provide sufficient  torque to damp     |torque is limited by                   |                                     |
+|                                |on vehicle speed         |determined in the failure injection    |overshoot. The steering is not able    |ActvRetMotTrq. If the                  |                                     |
+|                                |                         |tests(motor torque offset). If this    |to calm down the vehicle movement.     |active return can't reach the          |                                     |
+|                                |                         |torque amount is not sufficient to damp|                                       |desired steering wheel motion with a   |                                     |
+|                                |                         |a vehicle overshoot (steering wheel    |                                       |standard value of 0,5 Nm, you have     |                                     |
+|                                |                         |and yaw oscillation must fade out),    |                                       |to raise it to determine the desired   |                                     |
+|                                |                         |the parameter                          |                                       |motor torque.                          |                                     |
+|                                |                         |ActvRetMotTrq can be                   |                                       |This is monitored by the hard          |                                     |
+|                                |                         |used. In regenerative motor            |                                       |limit MaxMotTrqDepOnVehSpd.            |                                     |
+|                                |                         |operation (damping) would be an        |                                       |In case of permanent changes:          |                                     |
+|                                |                         |increased damping torque allowed.      |                                       |Consider the impact on the             |                                     |
+|                                |                         |                                       |                                       |safety concept.                        |                                     |
+|                                |                         +---------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+|                                |                         |No steering feel generating function.  |Required damping characteristic        |                                       |                                     |
+|                                |                         |The calibration curve is defining the  |generated by the Active Return         |                                       |                                     |
+|                                |                         |possible performance of the function   |function is not enough. Can lead to    |                                       |                                     |
+|                                |                         |and is to be used only to define       |a safety critical situation when       |                                       |                                     |
+|                                |                         |the safety limit.                      |steering gear or vehicle conditions    |                                       |                                     |
+|                                |                         |                                       |are changing.                          |                                       |                                     |
++--------------------------------+-------------------------+---------------------------------------+---------------------------------------+---------------------------------------+-------------------------------------+
+

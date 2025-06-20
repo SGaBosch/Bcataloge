@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="[0.0 500.0] (500.015625 1023.984375]" identifier="INPUT:vVehSpI_AbsAvgVehSpd_xdu16:var" display_name="vVehSpI_AbsAvgVehSpd_xdu16"/>
+</RangeDefinitions>

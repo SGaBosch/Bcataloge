@@ -1,0 +1,83 @@
+// ----------------------------------------------------------------------------
+//  Copyright (c) Robert Bosch Automotive Steering GmbH, Germany
+//                All rights reserved
+// ----------------------------------------------------------------------------
+
+
+sg_funktion ActiveReturnCheckI
+{
+
+   fkt_bezeichner ActiveReturnCheckI
+   {
+      deutsch  "ActiveReturnCheckI";
+      englisch "ActiveReturnCheckI";
+   }
+// //--------------------------------------------------------------------------------------
+// RAM-Groessen
+// //--------------------------------------------------------------------------------------
+//   ram_groesse mActRetI_MotorTorque_xds16
+//   {
+//      umrechnung     MMOT;
+//      codesyntax     csyGLRAMREDsw;
+//      datentyp       sw;
+//      minp_w         -3.0;
+//      maxp_w         3.0;
+//      init_wert      {0};
+//   }
+//   ram_bezeichner mActRetI_MotorTorque_xds16
+//   {
+//      deutsch  "motor torque of active return functionality";
+//      englisch "motor torque of active return functionality";
+//   }
+}
+
+
+// **************************************************************************************************
+// HISTORY:
+// --------
+// 
+// --------------------------------------------------------------------------------------------------
+// Unter anderem: Endekennung fuer neuen KM-Info-Trigger eingefügt
+// 2010-02-03 Boos Nicolas SGD EZPFF * (g52653)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\int_wp_job14130\1
+// --------------------------------------------------------------------------------------------------
+// 2010-02-10 Klotz Dietmar SGD EXT (gx0838)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\1
+// --------------------------------------------------------------------------------------------------
+// 2010-05-06 Boos Nicolas SGD EZPFF * (g52653)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\int_wp_job19901\1
+// --------------------------------------------------------------------------------------------------
+// 2010-05-21 Klotz Dietmar SGD EXT (gx0838)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\1
+// --------------------------------------------------------------------------------------------------
+// 2010-12-07 Woeger Rainer SGD EZPFF * (g41005)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\int_wp_job27320\1
+// --------------------------------------------------------------------------------------------------
+// 2011-01-19 Klotz Dietmar SGD EXT (gx0838)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\2
+// --------------------------------------------------------------------------------------------------
+// 2011-07-15 Gruenenwald Andreas SGD EXT (gx0630)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\int_wp_job34172\1
+// --------------------------------------------------------------------------------------------------
+// 2011-07-20 Klotz Dietmar SGD EXT (gx0838)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\3
+// --------------------------------------------------------------------------------------------------
+// 2012-07-24 --- (g52584)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\int_wp_job28930\1
+// --------------------------------------------------------------------------------------------------
+// 2012-08-09 Berckhemer Uwe SGD ZEEPA * (g52672)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\int_wp_job28930\2
+// --------------------------------------------------------------------------------------------------
+// 2012-09-04 Rieker Michael SGD ZEEPA (g53199)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\IActiveReturn_bpocc_pp.kgt@@\main\4
+// --------------------------------------------------------------------------------------------------
+// 2017-04-07 Haug Fabian SGD AS-ER/ENK3 * (g52267)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturnCheck\IActRetCheck_pp.kgt@@\main\int_wp_job131317\1
+// --------------------------------------------------------------------------------------------------
+// 2017-04-10 Nayak Prajwal Panduranga SGD AS-ER/ENK2 (g54110)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturnCheck\IActRetCheck_pp.kgt@@\main\1
+// --------------------------------------------------------------------------------------------------
+// 2019-07-30 Erdmann Dominik (AS-ER/ENO1) (erd1sgm)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturnCheck\IActiveReturnCheck_pp.kgt@@\main\int_wp_job209383\1
+// --------------------------------------------------------------------------------------------------
+// **************************************************************************.HE*********************

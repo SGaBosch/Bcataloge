@@ -1,0 +1,420 @@
+// ----------------------------------------------------------------------------
+//  Copyright (c) Robert Bosch Automotive Steering GmbH, Germany
+//                All rights reserved
+// ----------------------------------------------------------------------------
+
+
+sg_funktion ActiveReturn
+{
+   fkt_bezeichner ActiveReturn
+   {
+      deutsch  "Active Return";
+      englisch "Active Return";
+   }
+// -----------------------------------------------------------------------------
+// RAM-Groessen
+// -----------------------------------------------------------------------------
+   ram_groesse yActRet_NomSteerSpdIdx_xdu8
+   {
+      umrechnung     ZU0;
+      codesyntax     csyGLRAMub;
+      datentyp       ub;
+      minp_w         0.0;
+      maxp_w         254.0; // max value needs to be equal (or more) than the char field; doesn't care
+      init_wertp     {0.0};
+   }
+   ram_bezeichner yActRet_NomSteerSpdIdx_xdu8
+   {
+      deutsch  "pre-looked up index used for the interpolation of axis1 (vehicle speed) of vActRet_NominalSteeringSpeed_XAU16";
+      englisch "pre-looked up index used for the interpolation of axis1 (vehicle speed) of vActRet_NominalSteeringSpeed_XAU16";
+   }
+// -----------------------------------------------------------------------------
+   ram_groesse xActRet_NomSteerSpdFrac_xdu16
+   {
+      umrechnung     RIGHTSH16NP;
+      codesyntax     csyGLRAMuw;
+      datentyp       uw;
+      minp_w         0.0;
+      max_w          65535; // => 1.0 - 1 digit
+      init_wertp     {0.0};
+   }
+   ram_bezeichner xActRet_NomSteerSpdFrac_xdu16
+   {
+      deutsch  "pre-looked up fraction used for the interpolation of axis1 (vehicle speed) of vActRet_NominalSteeringSpeed_XAU16";
+      englisch "pre-looked up fraction used for the interpolation of axis1 (vehicle speed) of vActRet_NominalSteeringSpeed_XAU16";
+   }
+// -----------------------------------------------------------------------------
+   ram_groesse xActRet_MotorTorqueGain_xdu16
+   {
+      umrechnung     RIGHTSH10NP;
+      codesyntax     csyGLRAMuw;
+      datentyp       uw;
+      minp_w         0.0;
+      maxp_w         3.0;
+      init_wertp     {0};
+   }
+   ram_bezeichner xActRet_MotorTorqueGain_xdu16
+   {
+      deutsch  "value of xActRet_MotorTorqueGain_XAU16";
+      englisch "value of xActRet_MotorTorqueGain_XAU16";
+   }
+// -----------------------------------------------------------------------------
+   ram_groesse xActRet_SpeedFactorFilt_xds32
+   {
+      umrechnung     RIGHTSH20NP;
+      codesyntax     csyGLRAMsl;
+      datentyp       sl;  // SHALL BE SIGNED FOR CLEAN CODE GENERATION
+      minp_w         0.0; // MUST BE 0!!!
+      maxp_w         1.0;
+      init_wertp     {1.0};
+   }
+   ram_bezeichner xActRet_SpeedFactorFilt_xds32
+   {
+      deutsch  "filtrated active return steering speed factor";
+      englisch "filtrated active return steering speed factor";
+   }
+// -----------------------------------------------------------------------------
+   ram_groesse vActRet_ReturnSpeedDiff_xds16
+   {
+      umrechnung     SAS_8;
+      codesyntax     csyGLRAMsw;
+      datentyp       sw;
+      minp_w         -1500.0; // same as vApplI_SteeringAngleSpeed_xds16
+      maxp_w         1500.0;
+      init_wertp     {0};
+   }
+   ram_bezeichner vActRet_ReturnSpeedDiff_xds16
+   {
+      deutsch  "difference of steering speed controller";
+      englisch "difference of steering speed controller";
+   }
+// -----------------------------------------------------------------------------
+   ram_groesse xActRet_TorqueFactorFilt_xds32
+   {
+      umrechnung     RIGHTSH20NP;
+      codesyntax     csyGLRAMsl;
+      datentyp       sl;  // SHALL BE SIGNED FOR CLEAN CODE GENERATION
+      minp_w         0.0; // MUST BE 0!!!
+      maxp_w         1.0;
+      init_wertp     {1.0};
+   }
+   ram_bezeichner xActRet_TorqueFactorFilt_xds32
+   {
+      deutsch  "filtrated active return motor torque factor due to driver torque";
+      englisch "filtrated active return motor torque factor due to driver torque";
+   }
+// -----------------------------------------------------------------------------
+// ROM-Groessen
+// -----------------------------------------------------------------------------
+   kennfeld vActRet_NominalSteeringSpeed_XAU16
+   {
+      ablageschema                  AblGLKFuw;
+      adressierschema               AdSGLDir;
+      umrechnung                    SAS_8;
+      eingangsgroesse_x             vVehSpI_AbsAvgVehSpd_xdu16;    // this interface is used here just to make the working point visible via XCP
+      eingangsgroesse_y             wApplI_AbsSteeringAngle_xdu16; // this interface is used here just to make the working point visible via XCP
+      codesyntax                    csyDGLSAKFuw;
+      anzahl_stuetzstellen_x        6;
+      anzahl_stuetzstellen_y        13;
+      anzahl_test_stuetzstellen_x   6;
+      anzahl_test_stuetzstellen_y   13;
+      minp_x                        0;
+      maxp_x                        500;
+      minp_y                        0;
+      maxp_y                        1000;
+      minp_w                        0;
+      maxp_w                        1500;
+      test_stuetzstellenp_x        {0, 16, 32, 48, 64, 80};
+      test_stuetzstellenp_y        {0, 16.6667, 33.3333, 50, 66.6667, 83.3333, 100, 116.6667, 133.3333, 150, 166.6667, 183.3333, 200};
+      test_wertp                   {0, 0, 0, 0, 0, 0,
+                                    0, 163.52, 168.0622, 149.8933, 126.0467, 85.1667,
+                                    0, 257.44, 264.5911, 235.9867, 198.4433, 134.0833,
+                                    0, 341.04, 350.5133, 312.62, 262.885, 177.625,
+                                    0, 415.2, 426.7333, 380.6, 320.05, 216.25,
+                                    0, 468.48, 481.4933, 429.44, 361.12, 244,
+                                    0, 509.28, 523.4267, 466.84, 392.57, 265.25,
+                                    0, 544.32, 559.44, 498.96, 419.58, 283.5,
+                                    0, 579.36, 595.4533, 531.08, 446.59, 301.75,
+                                    0, 614.4, 631.4667, 563.2, 473.6, 320,
+                                    0, 633.6, 651.2, 580.8, 488.4, 330,
+                                    0, 652.8, 670.9333, 598.4, 503.2, 340,
+                                    0, 672, 690.6667, 616, 518, 350};
+   }
+   kgs_bezeichner vActRet_NominalSteeringSpeed_XAU16
+   {
+      deutsch  "nominal steering angle return speed depending on vehicle speed and steering angle";
+      englisch "nominal steering angle return speed depending on vehicle speed and steering angle";
+   }
+ // ----------------------------------------------------------------------------
+   kennlinie xActRet_SteerSpeedFactDepOnDriver_XAU16
+   {
+      umrechnung                        RIGHTSH10NP;
+      codesyntax                        csyGLSNAKLuw;
+      ablageschema                      AblGLKLuw;
+      adressierschema                   AdSGLDir;
+      eingangsgroesse_x                 mApplI_AbsDriverTorque_xdu16;  // this interface is used here just to make the working point visible via XCP
+      anzahl_stuetzstellen_x            6;
+      anzahl_test_stuetzstellen_x       6;
+      minp_x                            0.0;
+      maxp_x                            25.0;
+      minp_w                            0.0;
+      maxp_w                            1.0;
+      test_stuetzstellenp_x             { 0.0, 0.5, 1.0, 2.0, 3.0, 4.00 };
+      test_wertp                        { 1.0, 0.9, 0.8, 0.6, 0.4, 0.22 };
+   }
+   kgs_bezeichner xActRet_SteerSpeedFactDepOnDriver_XAU16
+   {
+      deutsch  "factor of nominal steering speed depending on driver torque";
+      englisch "factor of nominal steering speed depending on driver torque";
+   }
+// -----------------------------------------------------------------------------
+   kennlinie xActRet_RetTorqueFactDepOnDriver_XAU16
+   {
+      umrechnung                        RIGHTSH10NP;
+      codesyntax                        csyGLSNAKLuw;
+      ablageschema                      AblGLKLuw;
+      adressierschema                   AdSGLDir;
+      eingangsgroesse_x                 mApplI_AbsDriverTorque_xdu16;  // this interface is used here just to make the working point visible via XCP
+      anzahl_stuetzstellen_x            6;
+      anzahl_test_stuetzstellen_x       6;
+      minp_x                            0.0;
+      maxp_x                            25.0;
+      minp_w                            0.0;
+      maxp_w                            1.0;
+      test_stuetzstellenp_x             { 0.0, 0.5, 1.0, 2.0, 3.0, 4.00 };
+      test_wertp                        { 1.0, 0.9, 0.8, 0.6, 0.4, 0.22 };
+   }
+   kgs_bezeichner xActRet_RetTorqueFactDepOnDriver_XAU16
+   {
+      deutsch  "factor of active return motor torque (after limitation) depending on driver torque";
+      englisch "factor of active return motor torque (after limitation) depending on driver torque";
+   }
+// -----------------------------------------------------------------------------
+   kennlinie xActRet_MotorTorqueGain_XAU16
+   {
+      umrechnung                        RIGHTSH10NP;
+      codesyntax                        csyGLSNAKLuw;
+      ablageschema                      AblGLKLuw;
+      adressierschema                   AdSGLDir;
+      eingangsgroesse_x                 vVehSpI_AbsAvgVehSpd_xdu16;
+      anzahl_stuetzstellen_x            6;
+      anzahl_test_stuetzstellen_x       6;
+      minp_x                            0.0;
+      maxp_x                            250.0;
+      minp_w                            0.0;
+      maxp_w                            3.0;
+      test_stuetzstellenp_x             { 0.0, 10.00, 50.00, 120.00, 150.00, 230.0 };
+      test_wertp                        { 0.8,  0.87,  1.03,   1.22,   1.31,   1.5 };
+   }
+   kgs_bezeichner xActRet_MotorTorqueGain_XAU16
+   {
+      deutsch  "motor torque factor";
+      englisch "motor torque factor";
+   }
+// -----------------------------------------------------------------------------
+   kennwert xActRet_FilterFactor_XDU16
+   {
+      umrechnung           RIGHTSH10NP;
+      codesyntax           csyGLSNAKWuw;
+      ablageschema         AblGLKWuw;
+      adressierschema      AdSGLDir;
+      minp_w               0.01;
+      maxp_w               1.0;
+      test_wertp           0.1;
+   }
+   kgs_bezeichner xActRet_FilterFactor_XDU16
+   {
+      deutsch  "filter factor for filtrated nominal steering speed factor and motor torque factor";
+      englisch "filter factor for filtrated nominal steering speed factor and motor torque factor";
+   }
+// -----------------------------------------------------------------------------
+   kennwert xActRet_SteeringSpeedFact_XDU8
+   {
+      umrechnung           RIGHTSH7NP;
+      codesyntax           csyGLSNAKWub;
+      ablageschema         AblGLKWub;
+      adressierschema      AdSGLDir;
+      minp_w               0.0;
+      maxp_w               1.5;
+      test_wertp           1.0;
+   }
+   kgs_bezeichner xActRet_SteeringSpeedFact_XDU8
+   {
+      deutsch  "factor of nominal steering speed";
+      englisch "factor of nominal steering speed";
+   }
+// -----------------------------------------------------------------------------
+   kennwert xActRet_SteerSpeedGradAfterInvalid_XDU16
+   {
+      umrechnung           RIGHTSH15NP;
+      codesyntax           csyGLSNAKWuw;
+      ablageschema         AblGLKWuw;
+      adressierschema      AdSGLDir;
+      minp_w               0.0;
+      maxp_w               1.0;
+      test_wertp           0.005;
+   }
+   kgs_bezeichner xActRet_SteerSpeedGradAfterInvalid_XDU16
+   {
+      deutsch  "Gradient für einrampen nachdem Eingänge wieder gültig sind";
+      englisch "gradient for ramp up after invalid input signals";
+   }
+// -----------------------------------------------------------------------------
+   kennwert xActRet_SteeringSpeedAmp_XDU16
+   {
+      umrechnung           ARFACT;
+      codesyntax           csyGLSNAKWuw;
+      ablageschema         AblGLKWuw;
+      adressierschema      AdSGLDir;
+      minp_w               0.0;
+      maxp_w               0.020;
+      test_wertp           0.003;
+   }
+   kgs_bezeichner xActRet_SteeringSpeedAmp_XDU16
+   {
+      deutsch  "active return control amplification [Nm * s / °]";
+      englisch "active return control amplification [Nm * s / °]";
+   }
+// -----------------------------------------------------------------------------
+   kennwert mActRet_MaxMotorTorque_XDU8
+   {
+      umrechnung           MMOT_RSH6;
+      codesyntax           csyGLSNAKWub;
+      ablageschema         AblGLKWub;
+      adressierschema      AdSGLDir;
+      minp_w               0.0;
+      maxp_w               3.0;
+      test_wertp           1.0;
+   }
+   kgs_bezeichner mActRet_MaxMotorTorque_XDU8
+   {
+      deutsch  "limitation of active return torque";
+      englisch "limitation of active return torque";
+   }
+}
+
+
+// **************************************************************************************************
+// HISTORY:
+// --------
+// 
+// --------------------------------------------------------------------------------------------------
+// Unter anderem: Endekennung fuer neuen KM-Info-Trigger eingefügt
+// 2008-11-12 Ridder, Barbara (g52052)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\1
+// --------------------------------------------------------------------------------------------------
+// 2008-08-04 Haug, Fabian (g52267)
+//            \steering_epsdaimlerc218w166\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\1
+// --------------------------------------------------------------------------------------------------
+// 2008-08-13 Haug, Fabian (g52267)
+//            \steering_epsdaimlerc218w166\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\2
+// --------------------------------------------------------------------------------------------------
+// 2008-08-15 Haug, Fabian (g52267)
+//            \steering_epsdaimlerc218w166\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\3
+// --------------------------------------------------------------------------------------------------
+// 2008-12-05 Haug, Fabian (g52267)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\2
+// --------------------------------------------------------------------------------------------------
+// 2009-04-21 Sutter, Michael (g51902)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\int_wp_job12556\1
+// --------------------------------------------------------------------------------------------------
+// 2009-05-05 Gruenenwald,  Andreas (gx0630)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\int_wp_job12556\2
+// --------------------------------------------------------------------------------------------------
+// 2009-06-09 Sutter, Michael (g51902)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\int_wp_job12556\3
+// --------------------------------------------------------------------------------------------------
+// 2009-06-15 Berckhemer, Uwe (g52672)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\4
+// --------------------------------------------------------------------------------------------------
+// 2009-12-09 Haug Fabian SGD EZPFI * (g52267)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\int_wp_job14521\1
+// --------------------------------------------------------------------------------------------------
+// 2009-12-17 Klotz Dietmar SGD EXT (gx0838)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\5
+// --------------------------------------------------------------------------------------------------
+// 2010-02-03 Boos Nicolas SGD EZPFF * (g52653)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\int_wp_job14130\1
+// --------------------------------------------------------------------------------------------------
+// 2010-02-10 Klotz Dietmar SGD EXT (gx0838)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\6
+// --------------------------------------------------------------------------------------------------
+// 2010-03-04 Erdmann Dominik SGD EZPFF * (g52584)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\int_wp_job18631\1
+// --------------------------------------------------------------------------------------------------
+// 2010-04-01 Klotz Dietmar SGD EXT (gx0838)
+//            \steering_baukasten\SW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\7
+// --------------------------------------------------------------------------------------------------
+// 2010-05-06 Boos Nicolas SGD EZPFF * (g52653)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\int_wp_job19901\1
+// --------------------------------------------------------------------------------------------------
+// 2010-05-20 Klotz Dietmar SGD EXT (gx0838)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\2
+// --------------------------------------------------------------------------------------------------
+// 2010-06-21 Erdmann Dominik SGD EZPFF * (g52584)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\int_wp_job21434\1
+// --------------------------------------------------------------------------------------------------
+// 2010-09-07 Klotz Dietmar SGD EXT (gx0838)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\3
+// --------------------------------------------------------------------------------------------------
+// 2010-11-11 Erdmann Dominik SGD EZPFF * (g52584)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\int_wp_job26590\1
+// --------------------------------------------------------------------------------------------------
+// 2010-11-24 Klotz Dietmar SGD EXT (gx0838)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\araret_apkcc_pp.kgt@@\main\4
+// --------------------------------------------------------------------------------------------------
+// 2012-08-09 Berckhemer Uwe SGD ZEEPA * (g52672)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_apkcc_pp.kgt@@\main\int_wp_job28930\1
+// --------------------------------------------------------------------------------------------------
+// 2012-08-23 --- (g52584)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_apkcc_pp.kgt@@\main\int_wp_job28930\2
+// --------------------------------------------------------------------------------------------------
+// 2012-09-04 Rieker Michael SGD ZEEPA (g53199)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_apkcc_pp.kgt@@\main\int_wp_job28930\3
+// --------------------------------------------------------------------------------------------------
+// 2012-09-04 Rieker Michael SGD ZEEPA (g53199)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_apkcc_pp.kgt@@\main\6
+// --------------------------------------------------------------------------------------------------
+// 2013-08-26 --- (g51827)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_apkcc_pp.kgt@@\main\int_wp_job60513\1
+// --------------------------------------------------------------------------------------------------
+// 2013-08-30 --- (gx1487)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_apkcc_pp.kgt@@\main\7
+// --------------------------------------------------------------------------------------------------
+// 2014-10-31 --- (g53478)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_apkcc_pp.kgt@@\main\int_var_sdk22\int_wp_job68414\1
+// --------------------------------------------------------------------------------------------------
+// 2015-04-01 Schaal Thomas SGD EXT (gx1478)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_apkcc_pp.kgt@@\main\int_var_sdk22\1
+// --------------------------------------------------------------------------------------------------
+// 2015-05-08 Schaal Thomas SGD EXT (gx1478)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_apkcc_pp.kgt@@\main\8
+// --------------------------------------------------------------------------------------------------
+// 2017-04-07 Haug Fabian SGD AS-ER/ENK3 * (g52267)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_pp.kgt@@\main\int_wp_job131317\1
+// --------------------------------------------------------------------------------------------------
+// 2017-04-10 Nayak Prajwal Panduranga SGD AS-ER/ENK2 (g54110)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_pp.kgt@@\main\9
+// --------------------------------------------------------------------------------------------------
+// 2017-07-31 Ashok Kumar S Shyama CMT EXT (gx2610)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_pp.kgt@@\main\int_wp_job148179\1
+// --------------------------------------------------------------------------------------------------
+// 2017-08-01 Nayak Prajwal Panduranga SGD AS-ER/ENK2 (g54110)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_pp.kgt@@\main\10
+// --------------------------------------------------------------------------------------------------
+// 2017-08-10 Berckhemer Uwe SGD AS-ER/ENK2 (g52672)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_pp.kgt@@\main\11
+// --------------------------------------------------------------------------------------------------
+// 2017-12-13 Erdmann Dominik SGD AS-ER/ENK3 * (g52584)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_pp.kgt@@\main\int_wp_job140608\2
+// --------------------------------------------------------------------------------------------------
+// 2017-12-27 Viswanathan Gopalakrishnan CMT EXT (gbx2481)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_pp.kgt@@\main\12
+// --------------------------------------------------------------------------------------------------
+// 2019-07-16 --- (pry4cob)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_pp.kgt@@\main\int_wp_job206582\1
+// --------------------------------------------------------------------------------------------------
+// 2019-07-30 Erdmann Dominik (AS-ER/ENO1) (erd1sgm)
+//            \sgdcc_eps_sdk\EpsDriveSW\ImplementationSet\Application\SteeringFunctions\ActiveReturn\ActRet_Main_pp.kgt@@\main\int_wp_job209383\1
+// --------------------------------------------------------------------------------------------------
+// **************************************************************************.HE*********************

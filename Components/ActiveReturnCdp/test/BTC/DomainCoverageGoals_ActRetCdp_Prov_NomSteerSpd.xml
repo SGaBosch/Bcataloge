@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="[0.0] [1.0] [2.0] !(2.0 255.0]" identifier="INPUT:Rte_ActiveReturnCdp_RP_ActChar_ActChar:var" display_name="Rte_ActiveReturnCdp_RP_ActChar_ActChar"/>
+  <RangeDefinition range="[0.0 1000.0] !(1000.0 6553.5]" identifier="INPUT:AbsSteerAng:par" display_name="AbsSteerAng"/>
+  <RangeDefinition range="[0.0 500.0] !(500.0 1023.984375]" identifier="INPUT:AbsAvgVehSpd:par" display_name="AbsAvgVehSpd"/>
+</RangeDefinitions>

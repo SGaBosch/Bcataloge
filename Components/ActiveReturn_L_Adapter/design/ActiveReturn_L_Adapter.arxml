@@ -1,0 +1,2073 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created with SystemDesk Release 2023-B (23.1p1)-->
+<AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Eps_Repository</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>ActiveReturn</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="ba507c99-9994-4fe7-8ea9-26275b8f7184">
+              <SHORT-NAME>ActiveReturn_L_Adapter</SHORT-NAME>
+              <ELEMENTS>
+                <APPLICATION-SW-COMPONENT-TYPE UUID="b9330d83-e7b1-4c0a-a5af-08a7ab23e791">
+                  <SHORT-NAME>ActiveReturn_L_Adapter</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="f2372e0f-f555-46ef-bdac-e82a5acd7889">
+                      <SHORT-NAME>PP_VehSpd</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsAvgVehSpd</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsMaxSafeVehSpd</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="f1b2df66-6c29-4a00-b1f4-64a39f3fabeb">
+                      <SHORT-NAME>PP_SteerAng</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAng</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAngSt</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="f2fc19d1-f172-4c21-99ff-f3d2388a2703">
+                      <SHORT-NAME>PP_ActvRetFactors</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetFactors/ActvRetFuncFac</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetFactors/ActvRetSpdFac</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetFactors</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="8c7e5692-81b8-462b-875c-b3e4b8f92dfd">
+                      <SHORT-NAME>EcuState</SHORT-NAME>
+                      <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="4f9019f0-41fe-499a-9b7a-68dd18fb3561">
+                      <SHORT-NAME>PP_ActvRetSetEveEntry</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <SERVER-COM-SPEC>
+                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetSetEveEntry/Set_ActvRetEntry</OPERATION-REF>
+                        </SERVER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetSetEveEntry</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="6641ca1f-4ffe-498b-be67-72a696f6009a">
+                      <SHORT-NAME>PP_ActvRetDiagData</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <SERVER-COM-SPEC>
+                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetDiagData/Set_ActvRetDiagData</OPERATION-REF>
+                        </SERVER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetDiagData</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="22789998-02fa-4ede-9416-da6be669d18d">
+                      <SHORT-NAME>RP_ActvRetMotTrq</SHORT-NAME>
+                      <REQUIRED-COM-SPECS>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/IF_ActvRetMotTrq/ActvRetMotTrq</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                          <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                          <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/IF_ActvRetMotTrq</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="bb9b9c9e-c216-4133-bfcb-e505ac4ef7e2">
+                      <SHORT-NAME>PP_DrvrTrq</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_DrvrTrq/DrvrTrq</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_DrvrTrq</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="be0067dc-5591-436f-9a1e-92a2a772182b">
+                      <SHORT-NAME>PP_TorsBarTrq</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_TorsBarTrq/TorsBarTrq</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_TorsBarTrq</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="6c66b060-9b67-4aee-9102-0c32c79964e9">
+                      <SHORT-NAME>PP_SteerAngSpd</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAngSpd/SteerAngSpd</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAngSpd</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="c9066fd7-5948-4e0d-a523-2cfad7b33fbb">
+                      <SHORT-NAME>PP_GearSign</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_GearSign/GearSign</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_GearSign</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="99bc3739-ab8d-47b6-9d29-b450c7f0a9f9">
+                      <SHORT-NAME>PP_ActChar</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActChar/ActChar</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActChar</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="873ec29e-0a64-438a-85b7-857e60cedf45">
+                      <SHORT-NAME>PP_LoadFacRat</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_LoadFacRat/LoadFacRat</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>1</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_LoadFacRat</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="6852671e-a4ac-4ddf-9bff-b9f1e93ca3d5">
+                      <SHORT-NAME>IB_ActiveReturn_L_Adapter</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataTypeMappingSets/DTMS_ActvRet_L_Adpr</DATA-TYPE-MAPPING-REF>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataTypeMappingSets/DTMS_ActvRetChk</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <EVENTS>
+                        <TIMING-EVENT UUID="8af1affd-9401-48ff-868f-19b8cbf1c66f">
+                          <SHORT-NAME>TE_ActiveReturn_L_Adapter_100msEnd</SHORT-NAME>
+                          <DISABLED-MODE-IREFS>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/ApplicationInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/ApplicationOff</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/EcuInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/PostRun</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                          </DISABLED-MODE-IREFS>
+                          <PERIOD>0.1</PERIOD>
+                        </TIMING-EVENT>
+                        <TIMING-EVENT UUID="888b2373-4828-4101-9bf1-29f83fe7f5dc">
+                          <SHORT-NAME>TE_ActiveReturn_L_Adapter_100msStart</SHORT-NAME>
+                          <DISABLED-MODE-IREFS>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/ApplicationInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/ApplicationOff</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/EcuInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/PostRun</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                          </DISABLED-MODE-IREFS>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/IB_ActiveReturn_L_Adapter/ActvRet_L_Adpr_100msStrt</START-ON-EVENT-REF>
+                          <PERIOD>0.1</PERIOD>
+                        </TIMING-EVENT>
+                        <TIMING-EVENT UUID="ab56785a-8953-446e-941d-88b4ac2affc7">
+                          <SHORT-NAME>TE_ActiveReturn_L_Adapter_10msEnd</SHORT-NAME>
+                          <DISABLED-MODE-IREFS>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/ApplicationInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/ApplicationOff</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/EcuInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/PostRun</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                          </DISABLED-MODE-IREFS>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/IB_ActiveReturn_L_Adapter/ActvRet_L_Adpr_10msEnd</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
+                        <TIMING-EVENT UUID="33f692ac-05d9-4c52-8f96-3ec25f73e337">
+                          <SHORT-NAME>TE_ActiveReturn_L_Adapter_10msStart</SHORT-NAME>
+                          <DISABLED-MODE-IREFS>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/ApplicationInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/ApplicationOff</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/EcuInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/PostRun</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                          </DISABLED-MODE-IREFS>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/IB_ActiveReturn_L_Adapter/ActvRet_L_Adpr_10msStrt</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="be0da5e4-5bd8-4b84-a6b3-f8d13fe00a9c">
+                          <SHORT-NAME>OIE_ActiveReturn_L_Adapter_SetEventEntry</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/IB_ActiveReturn_L_Adapter/ActvRet_L_Adpr_SetEveEntry</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_ActvRetSetEveEntry</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetSetEveEntry/Set_ActvRetEntry</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="3926515a-6e83-4835-80e1-8ce89ea5af8a">
+                          <SHORT-NAME>OIE_ActiveReturn_L_Adapter_DiagData</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/IB_ActiveReturn_L_Adapter/ActvRet_L_Adpr_DiagData</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_ActvRetDiagData</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetDiagData/Set_ActvRetDiagData</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="1a01e625-c439-4a11-b1e6-2d3018cf93a9">
+                          <SHORT-NAME>ActvRet_L_Adpr_10msStrt</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <DATA-SEND-POINTS>
+                            <VARIABLE-ACCESS UUID="a2854fbb-713b-4db6-b3b4-4e6dcde3386d">
+                              <SHORT-NAME>DSP_PP_DrvrTrq_DrvrTrq</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_DrvrTrq</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_DrvrTrq/DrvrTrq</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="5b28c843-a6ca-490f-92bc-ee8a33ec5e22">
+                              <SHORT-NAME>DSP_PP_TorsBarTrq_TorsBarTrq</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_TorsBarTrq</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_TorsBarTrq/TorsBarTrq</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="43fe52b4-8bcf-47c8-8101-564d5da2c4bb">
+                              <SHORT-NAME>DSP_PP_SteerAngSpd_SteerAngSpd</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_SteerAngSpd</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAngSpd/SteerAngSpd</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="9f08847e-560f-4d5b-af62-7680ac125b2d">
+                              <SHORT-NAME>DSP_PP_GearSign_GearSign</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_GearSign</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_GearSign/GearSign</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="ec3328ab-eacf-4cd0-b1c2-f705aef09059">
+                              <SHORT-NAME>DSP_PP_ActChar_ActChar</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_ActChar</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActChar/ActChar</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="69661e51-7158-4dd3-8076-af11f573878b">
+                              <SHORT-NAME>DSP_PP_LoadFacRat_LoadFacRat</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_LoadFacRat</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_LoadFacRat/LoadFacRat</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="291ad89a-62a4-4bcc-9f99-77e91e176ca5">
+                              <SHORT-NAME>DSP_PP_SteerAng_SteerAng</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_SteerAng</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAng</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="fe18d704-1517-4d64-ac6c-eed2dec52ea8">
+                              <SHORT-NAME>DSP_PP_SteerAng_SteerAngSt</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_SteerAng</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAngSt</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="788c9528-adcd-46e3-b793-be1814cb1e7f">
+                              <SHORT-NAME>DSP_PP_ActvRetFactors_ActvRetFuncFac</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_ActvRetFactors</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetFactors/ActvRetFuncFac</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="0a18a94f-94a4-42ca-8028-233ab9ad934a">
+                              <SHORT-NAME>DSP_PP_ActvRetFactors_ActvRetSpdFac</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_ActvRetFactors</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetFactors/ActvRetSpdFac</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="d24ecb8a-9b3b-4398-9de5-46bb1b574330">
+                              <SHORT-NAME>DSP_PP_VehSpd_AbsAvgVehSpd</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_VehSpd</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsAvgVehSpd</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="20907ee7-ea39-4279-bf5a-cdd19224755a">
+                              <SHORT-NAME>DSP_PP_VehSpd_AbsMaxSafeVehSpd</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_VehSpd</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsMaxSafeVehSpd</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </DATA-SEND-POINTS>
+                          <SYMBOL>ActRetLAdapter_10msStart</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1dea599a-995c-44b4-a33d-c854b6f30a2e">
+                          <SHORT-NAME>ActvRet_L_Adpr_10msEnd</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                            <VARIABLE-ACCESS UUID="d8c06152-0cd3-4dbc-a86d-5b588fc1eb72">
+                              <SHORT-NAME>DRP_RP_ActvRetMotTrq_ActvRetMotTrq</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/RP_ActvRetMotTrq</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/IF_ActvRetMotTrq/ActvRetMotTrq</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                          <SYMBOL>ActRetLAdapter_10msEnd</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1ec816c6-0da1-4e4f-b672-2d09d553dc45">
+                          <SHORT-NAME>ActvRet_L_Adpr_100msStrt</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <DATA-SEND-POINTS>
+                            <VARIABLE-ACCESS UUID="45a62041-d12b-4509-a816-988c1194020a">
+                              <SHORT-NAME>DSP_PP_VehSpd_AbsAvgVehSpd</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ActiveReturn_L_Adapter/PP_VehSpd</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsAvgVehSpd</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </DATA-SEND-POINTS>
+                          <SYMBOL>ActRetLAdapter_100msStart</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="10472341-7a1f-4eef-aa4f-6a5ad66d207c">
+                          <SHORT-NAME>ActvRet_L_Adpr_SetEveEntry</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ActRetLAdapter_SetEventEntry</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="9880001c-803a-4774-8afe-2595bfa37bf8">
+                          <SHORT-NAME>ActvRet_L_Adpr_DiagData</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ActRetLAdapter_DiagData</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </APPLICATION-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="a51c1833-9ecc-4984-8e93-8a64d312bcc2">
+                  <SHORT-NAME>Interfaces</SHORT-NAME>
+                  <ELEMENTS>
+                    <MODE-DECLARATION-GROUP UUID="72463365-dc87-4238-ab17-86c170c89224">
+                      <SHORT-NAME>ApplicationModes</SHORT-NAME>
+                      <CATEGORY>ALPHABETIC_ORDER</CATEGORY>
+                      <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes/EcuInit</INITIAL-MODE-REF>
+                      <MODE-DECLARATIONS>
+                        <MODE-DECLARATION UUID="ddecb0e0-de41-4c87-a26b-98ac6d560fa1">
+                          <SHORT-NAME>ApplicationInit</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="4763db82-98c2-4b0c-95f2-57fbec6c2626">
+                          <SHORT-NAME>ApplicationOff</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="c3142243-c72e-46a2-9b27-229fec7e2446">
+                          <SHORT-NAME>EcuInit</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="76845ea9-37a2-4b39-8b76-5e02b68ba611">
+                          <SHORT-NAME>Error</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="25b3a2bb-9c60-45a1-80af-a6d482174a27">
+                          <SHORT-NAME>FailOp</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="ca17a95d-8757-4abe-9519-61c8eafbaea9">
+                          <SHORT-NAME>Normal</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="ef7c91ec-d40f-4acf-8b75-027119c6d219">
+                          <SHORT-NAME>PostRun</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="888cbc0c-9c51-431a-bfaf-b7d5ea941802">
+                          <SHORT-NAME>Production</SHORT-NAME>
+                        </MODE-DECLARATION>
+                      </MODE-DECLARATIONS>
+                    </MODE-DECLARATION-GROUP>
+                    <MODE-SWITCH-INTERFACE UUID="eb9a6c40-0471-4ed6-9302-c799f6e7189f">
+                      <SHORT-NAME>EcuState</SHORT-NAME>
+                      <MODE-GROUP UUID="5f6cc666-2131-4620-9184-3e4e2169dac9">
+                        <SHORT-NAME>ApplicationModes</SHORT-NAME>
+                        <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes</TYPE-TREF>
+                      </MODE-GROUP>
+                    </MODE-SWITCH-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="7af719a8-af52-44fc-8abc-c65aaea4da70">
+                      <SHORT-NAME>IF_AbsDrvrTrq</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="0d2ad7e7-e05d-4f5f-b84c-90eaf8ff837c">
+                          <SHORT-NAME>AbsDrvrTrq</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_AbsDrvrTrq</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_AbsDrvrTrq/AbsDrvrTrq</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="a979341f-d5d6-4932-a7eb-39b423d05f4c">
+                      <SHORT-NAME>IF_AbsSteerAng</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="5218661d-e63e-4dca-9641-7f3da9bfcbad">
+                          <SHORT-NAME>AbsSteerAng</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_AbsSteerAng</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_AbsSteerAng/AbsSteerAng</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="c26d7db5-33c6-43d6-b7b7-3c965dda607d">
+                      <SHORT-NAME>IF_DrvrTrq</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="ca44efe3-950d-4933-a14e-83fb561f8bd3">
+                          <SHORT-NAME>DrvrTrq</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_DrvrTrq</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_DrvrTrq/DrvrTrq</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="4ab37710-bfe8-401c-befe-20262a0ee981">
+                      <SHORT-NAME>IF_GearSign</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="7a830ce9-36dc-4b46-8a88-e16552cfefb8">
+                          <SHORT-NAME>GearSign</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_GearSign</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_GearSign/GearSign</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="7b8f8cb4-5bfb-438c-b3f0-c3d625ba7938">
+                      <SHORT-NAME>IF_LoadFacRat</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="ebb1b6e8-6356-432c-b8f7-2e5bcfe79f02">
+                          <SHORT-NAME>LoadFacRat</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_LoadFacRat</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_LoadFacRat/LoadFacRat</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="03b0bbf7-6a6f-4a74-8c1b-ff6e25eb71c7">
+                      <SHORT-NAME>IF_ActChar</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="d2e0d5a2-1fcb-4a88-b680-bedc15704712">
+                          <SHORT-NAME>ActChar</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_ActChar</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="ed6fe58e-fb8d-417e-9bd5-461ef02e0b54">
+                      <SHORT-NAME>IF_SteerAngSpd</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="5ec7e43a-a9d6-4614-ac33-7f567ae61d8d">
+                          <SHORT-NAME>SteerAngSpd</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_SteerAngSpd</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAngSpd/SteerAngSpd</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="804d772a-552b-4f44-bfc6-0c55f57eef18">
+                      <SHORT-NAME>IF_TorsBarTrq</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="15e7a182-0be2-4ab5-8d7c-9e8650b4354a">
+                          <SHORT-NAME>TorsBarTrq</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_TorsBarTrq</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_TorsBarTrq/TorsBarTrq</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="cfd97047-b450-428d-95dd-b757a36f1bb6">
+                      <SHORT-NAME>IF_ActvRetFactors</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="edc717df-162c-4110-bce2-a5a3ec56d7db">
+                          <SHORT-NAME>ActvRetFuncFac</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_ActvRetFuncFac</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                        <VARIABLE-DATA-PROTOTYPE UUID="2187b00c-9e17-43ae-b2db-7450b85997d8">
+                          <SHORT-NAME>ActvRetSpdFac</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_ActvRetSpdFac</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetFactors/ActvRetFuncFac</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetFactors/ActvRetSpdFac</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="10036e69-8613-42ae-b15d-82d51de809c5">
+                      <SHORT-NAME>IF_SteerAng</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="21a42d04-7aee-46bb-8086-2c643a132f56">
+                          <SHORT-NAME>SteerAng</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_SteerAng</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                        <VARIABLE-DATA-PROTOTYPE UUID="08492901-3c26-44ec-88b7-00deafd419d1">
+                          <SHORT-NAME>SteerAngSt</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_SteerAngSt</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAng</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAngSt</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="19c48018-e015-4e79-b95e-009e2ddb6532">
+                      <SHORT-NAME>IF_VehSpd</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="5c649088-fc3c-4470-a3ab-5d9dceee3930">
+                          <SHORT-NAME>AbsAvgVehSpd</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_AbsAvgVehSpd</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                        <VARIABLE-DATA-PROTOTYPE UUID="b833ba11-096a-46a8-af9b-72d9842e6ba5">
+                          <SHORT-NAME>AbsMaxSafeVehSpd</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_AbsMaxSafeVehSpd</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsAvgVehSpd</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsMaxSafeVehSpd</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="1fac6323-b5dc-4fb2-8520-e4482296b427">
+                  <SHORT-NAME>ApplicationDataTypes</SHORT-NAME>
+                  <ELEMENTS>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="dd381a8f-f97f-437a-994b-0945ca0dd9bf">
+                      <SHORT-NAME>ADT_AbsDrvrTrq</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_TBTHIGH</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_AbsDrvrTrq</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="176a865c-cec9-4ab7-9225-85dbf5748e79">
+                      <SHORT-NAME>ADT_DrvrTrq</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_TBTHIGH</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_DrvrTrq</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="07d5cd59-d4ab-47cc-9e67-016299e4e909">
+                      <SHORT-NAME>ADT_TorsBarTrq</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_TBTHIGH</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_TorsBarTrq</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="28e91065-7a78-423e-9865-fad6b97f0862">
+                      <SHORT-NAME>ADT_SteerAngSt</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_SteerAngSt</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_SteerAngSt</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="a1a8472e-3d91-4c28-9cf9-8c9ef3906f62">
+                      <SHORT-NAME>ADT_SteerAngSpd</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_SAS_8</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_SteerAngSpd</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="4d6210d6-2dd5-464f-9b7d-3b395695545a">
+                      <SHORT-NAME>ADT_AbsAvgVehSpd</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_VFZHIGH</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_AbsAvgVehSpd</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="f8a07055-d017-4484-a5cf-bddd75842ac9">
+                      <SHORT-NAME>ADT_AbsMaxSafeVehSpd</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_VFZHIGH</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_AbsMaxSafeVehSpd</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="e96e5832-8a6c-4329-8b1f-420242043fa9">
+                      <SHORT-NAME>ADT_AbsSteerAng</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_SA_10</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_AbsSteerAng</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="758bc2f8-f7bb-468a-8417-fe45e96656ec">
+                      <SHORT-NAME>ADT_SteerAng</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_SA_10</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_SteerAng</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="f2dd206e-69ef-48e3-a4e4-744ee2795c36">
+                      <SHORT-NAME>ADT_GearSign</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_ZU0</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_GearSign</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="5d210be0-4cf2-434d-b1ba-f50974c9dfcc">
+                      <SHORT-NAME>ADT_ActvRetFuncFac</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_RIGHTSH10NP</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_ActvRetFuncFac</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="773eba76-f05a-4235-aa5a-902c39245d27">
+                      <SHORT-NAME>ADT_ActvRetSpdFac</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_RIGHTSH10NP</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_ActvRetSpdFac</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="82943a3f-9b2d-4fa1-93fb-9d38a139ef97">
+                      <SHORT-NAME>ADT_ActChar</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_ZU0</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_ActChar</DATA-CONSTR-REF>
+                            <INVALID-VALUE>
+                              <APPLICATION-VALUE-SPECIFICATION>
+                                <CATEGORY>VALUE</CATEGORY>
+                                <SW-VALUE-CONT>
+                                  <SW-VALUES-PHYS>
+                                    <V>255</V>
+                                  </SW-VALUES-PHYS>
+                                </SW-VALUE-CONT>
+                              </APPLICATION-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                            <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="75a460cc-1a59-4c71-9a31-95c7d3044ec0">
+                      <SHORT-NAME>ADT_LoadFacRat</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_RIGHTSH10NP</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_LoadFacRat</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="067a2be8-e2e0-4593-9b2e-1a986e8077a0">
+                  <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+                  <ELEMENTS>
+                    <IMPLEMENTATION-DATA-TYPE UUID="1cdb48b2-e648-4a62-8b82-206efaca934d">
+                      <SHORT-NAME>IDT_AbsDrvrTrq</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_AbsDrvrTrq</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>65535</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="9a6fd883-752e-4dd5-9ac1-f80c479fd692">
+                      <SHORT-NAME>IDT_DrvrTrq</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_DrvrTrq</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>32767</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="cea6e7c4-fb0f-42d6-a6d9-b48007b83fc6">
+                      <SHORT-NAME>IDT_TorsBarTrq</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_TorsBarTrq</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>32767</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="3a70d331-b23b-46ba-973b-2ff05eb75e04">
+                      <SHORT-NAME>IDT_SteerAngSt</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_SteerAngSt</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>255</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="b61c2a0b-4734-4660-be88-5df2840b20c2">
+                      <SHORT-NAME>IDT_SteerAngSpd</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_SteerAngSpd</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>32767</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="79cb5bd9-a34e-48cd-8bad-457fcbcc114c">
+                      <SHORT-NAME>IDT_AbsAvgVehSpd</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_AbsAvgVehSpd</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>65535</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="18375ca0-323a-4acd-882e-19fb7ba2b94b">
+                      <SHORT-NAME>IDT_AbsMaxSafeVehSpd</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_AbsMaxSafeVehSpd</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>65535</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="275f9ee8-9485-418c-924a-c6ef7b6baff7">
+                      <SHORT-NAME>IDT_AbsSteerAng</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_AbsSteerAng</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>65535</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="3669f5b8-78cc-4b9a-a51a-8237fbd044a6">
+                      <SHORT-NAME>IDT_SteerAng</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_SteerAng</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>32767</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="66438327-fbad-4cf2-aff5-7b7d755589e5">
+                      <SHORT-NAME>IDT_GearSign</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_GearSign</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>127</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="9263afe8-07b6-4d22-b971-dbf9a3834703">
+                      <SHORT-NAME>IDT_ActvRetFuncFac</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_ActvRetFuncFac</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>65535</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="862109e3-66ad-44e5-bbaa-a28f9dbcb765">
+                      <SHORT-NAME>IDT_ActvRetSpdFac</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_ActvRetSpdFac</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>65535</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="f86a8b51-678d-4f78-88af-0aa9ad052900">
+                      <SHORT-NAME>IDT_ActChar</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_ActChar</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="b8f17a0f-63ae-489f-95eb-0dc2ca60414f">
+                      <SHORT-NAME>IDT_LoadFacRat</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_LoadFacRat</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>65535</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="7c6f0bc2-8abb-46a1-938b-ef1d96059b84">
+                  <SHORT-NAME>CompuMethods</SHORT-NAME>
+                  <ELEMENTS>
+                    <COMPU-METHOD UUID="deb1b76c-e5bf-4e4a-8338-08f0074fd632">
+                      <SHORT-NAME>CM_ARFACT</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>6.103515625e-05</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="bad86b08-6095-4999-8209-d98693cb8fbd">
+                      <SHORT-NAME>CM_SteerAngSt</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SYMBOL>CM_SYMBOL_RP_INVALID</SYMBOL>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>CM_SYMBOL_RP_INVALID</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SYMBOL>CM_SYMBOL_RP_RAW</SYMBOL>
+                            <LOWER-LIMIT>1</LOWER-LIMIT>
+                            <UPPER-LIMIT>1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>CM_SYMBOL_RP_RAW</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SYMBOL>CM_SYMBOL_RP_EXACTLY</SYMBOL>
+                            <LOWER-LIMIT>2</LOWER-LIMIT>
+                            <UPPER-LIMIT>2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>CM_SYMBOL_RP_EXACTLY</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SYMBOL>CM_SYMBOL_RP_INITWAIT</SYMBOL>
+                            <LOWER-LIMIT>3</LOWER-LIMIT>
+                            <UPPER-LIMIT>3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>CM_SYMBOL_RP_INITWAIT</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="0de0f7e8-1cae-403d-a139-d15e6144b296">
+                      <SHORT-NAME>CM_MMOT</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NwtMtr</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>0.0</V>
+                                <V>0.0009765625</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="7eb22ab4-03a9-4e38-9a35-c6c651be0ecb">
+                      <SHORT-NAME>CM_MMOT_RSH6</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NwtMtr</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>0.0</V>
+                                <V>0.015625</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="e93e5d69-ccfc-42fe-9537-e29e80854f1d">
+                      <SHORT-NAME>CM_RIGHTSH10NP</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>0.0009765625</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="57dbde4b-c2ab-4797-b288-e9e1d4c20cb6">
+                      <SHORT-NAME>CM_RIGHTSH15NP</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>3.0517578125e-05</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="8ad7127e-be78-4401-b34a-7801e7d26fbd">
+                      <SHORT-NAME>CM_RIGHTSH16NP</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>1.52587890625e-05</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="0c022226-db6e-41e0-a6da-59114b3728a6">
+                      <SHORT-NAME>CM_RIGHTSH20NP</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>9.5367431640625e-07</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="e1565c32-439d-4d65-9841-7c70cfab38d7">
+                      <SHORT-NAME>CM_RIGHTSH7NP</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>0.0078125</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="c9e2dccc-a1dd-4e06-9088-5e6bfc9b4da9">
+                      <SHORT-NAME>CM_SA_10</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/DegAngle</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>0.1</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="fe678134-c96b-47e1-94ae-1bcd89405464">
+                      <SHORT-NAME>CM_SAS_8</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>0.125</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="5d6c8c33-878f-4246-b810-4998835c9c3b">
+                      <SHORT-NAME>CM_TBT_RSH4</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NwtMtr</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>0.0625</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="5f27218d-21d6-4043-bdc9-7d75002017af">
+                      <SHORT-NAME>CM_TBTHIGH</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NwtMtr</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>0.0009765625</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="f3b2fa21-0245-45a2-8816-51ba9675d6b9">
+                      <SHORT-NAME>CM_VFZHIGH</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/KiloMtrPerHr</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>0.015625</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="c45f6b35-2730-4b32-b310-d3d82ba287c1">
+                      <SHORT-NAME>CM_ZU0</SHORT-NAME>
+                      <CATEGORY>LINEAR</CATEGORY>
+                      <UNIT-REF DEST="UNIT">/AUTOSAR_AISpecification/Units/NoUnit</UNIT-REF>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <COMPU-RATIONAL-COEFFS>
+                              <COMPU-NUMERATOR>
+                                <V>-0.0</V>
+                                <V>1.0</V>
+                              </COMPU-NUMERATOR>
+                              <COMPU-DENOMINATOR>
+                                <V>1</V>
+                              </COMPU-DENOMINATOR>
+                            </COMPU-RATIONAL-COEFFS>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="fe122bcc-ca67-4617-b61a-30d599fb409e">
+                  <SHORT-NAME>DataConstraints</SHORT-NAME>
+                  <ELEMENTS>
+                    <DATA-CONSTR UUID="b770e3bf-78ae-47fa-86c1-c6b6b1160d70">
+                      <SHORT-NAME>DC_AbsDrvrTrq</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>25</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>25600</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="0455a953-b6bf-4a26-bbed-01f9532f8866">
+                      <SHORT-NAME>DC_DrvrTrq</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>-25</LOWER-LIMIT>
+                            <UPPER-LIMIT>25</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>-25600</LOWER-LIMIT>
+                            <UPPER-LIMIT>25600</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="d66f00da-eeb6-4586-a60d-699885abb33c">
+                      <SHORT-NAME>DC_TorsBarTrq</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>-25</LOWER-LIMIT>
+                            <UPPER-LIMIT>25</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>-25600</LOWER-LIMIT>
+                            <UPPER-LIMIT>25600</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="8a1c79d9-c01b-4a93-aaca-eeec52ec2358">
+                      <SHORT-NAME>DC_SteerAngSt</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>3</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>3</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="0723dc6a-1748-4fb4-a447-f179c99ebe77">
+                      <SHORT-NAME>DC_SteerAngSpd</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>-1500</LOWER-LIMIT>
+                            <UPPER-LIMIT>1500</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>-12000</LOWER-LIMIT>
+                            <UPPER-LIMIT>12000</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="3d5fa506-10f6-4673-891a-129e4bc75a07">
+                      <SHORT-NAME>DC_AbsAvgVehSpd</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>500</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>32000</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="470cf66e-2af7-44af-a74b-5dd27f6fc1d0">
+                      <SHORT-NAME>DC_AbsMaxSafeVehSpd</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>500</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>32000</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="7a0d832d-2616-4ac7-8a57-433abb2678dd">
+                      <SHORT-NAME>DC_AbsSteerAng</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>1000</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>10000</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="27cec0d5-65d9-4757-a236-ec9dcde62157">
+                      <SHORT-NAME>DC_SteerAng</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>-1000</LOWER-LIMIT>
+                            <UPPER-LIMIT>1000</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>-10000</LOWER-LIMIT>
+                            <UPPER-LIMIT>10000</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="8d53880c-dc71-4c96-9564-a4af270bc2c9">
+                      <SHORT-NAME>DC_GearSign</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>-1</LOWER-LIMIT>
+                            <UPPER-LIMIT>1</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>-1</LOWER-LIMIT>
+                            <UPPER-LIMIT>1</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="add97156-c279-4197-bf00-ce0b5f0e5545">
+                      <SHORT-NAME>DC_ActvRetFuncFac</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>1</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>1024</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="bc401c56-bb69-43cb-a7ce-748e4cbbb29a">
+                      <SHORT-NAME>DC_ActvRetSpdFac</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>1</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>1024</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="dee6493c-539e-4194-a052-9dc4024275c0">
+                      <SHORT-NAME>DC_ActChar</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>2</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>2</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="5ff8bd20-a575-4c26-9033-45b31862a0c1">
+                      <SHORT-NAME>DC_LoadFacRat</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>3</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>3072</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="e94f7628-54f5-43df-8cf3-f0aa73650810">
+                  <SHORT-NAME>DataTypeMappingSets</SHORT-NAME>
+                  <ELEMENTS>
+                    <DATA-TYPE-MAPPING-SET UUID="ba9b55b7-5279-4298-abc4-92f2a614b5dd">
+                      <SHORT-NAME>DTMS_ActvRet_L_Adpr</SHORT-NAME>
+                      <DATA-TYPE-MAPS>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_AbsDrvrTrq</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_AbsDrvrTrq</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_DrvrTrq</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_DrvrTrq</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_TorsBarTrq</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_TorsBarTrq</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_SteerAngSt</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_SteerAngSt</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_SteerAngSpd</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_SteerAngSpd</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_AbsAvgVehSpd</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_AbsAvgVehSpd</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_AbsMaxSafeVehSpd</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_AbsMaxSafeVehSpd</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_AbsSteerAng</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_AbsSteerAng</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_SteerAng</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_SteerAng</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_GearSign</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_GearSign</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_ActvRetFuncFac</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_ActvRetFuncFac</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_ActvRetSpdFac</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_ActvRetSpdFac</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_ActChar</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_ActChar</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ApplicationDataTypes/ADT_LoadFacRat</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_LoadFacRat</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                      </DATA-TYPE-MAPS>
+                      <MODE-REQUEST-TYPE-MAPS>
+                        <MODE-REQUEST-TYPE-MAP>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/ApplicationModes</MODE-GROUP-REF>
+                        </MODE-REQUEST-TYPE-MAP>
+                      </MODE-REQUEST-TYPE-MAPS>
+                    </DATA-TYPE-MAPPING-SET>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="bac9c987-71e5-4715-bf7e-403e9f9d7432">
+                  <SHORT-NAME>SWAddrMethod</SHORT-NAME>
+                  <ELEMENTS>
+                    <SW-ADDR-METHOD UUID="c140262b-9870-43ba-ab47-95ca73aa5695">
+                      <SHORT-NAME>DAMOS_RAM_DTA</SHORT-NAME>
+                      <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                      <SECTION-INITIALIZATION-POLICY>INIT</SECTION-INITIALIZATION-POLICY>
+                      <SECTION-TYPE>VAR</SECTION-TYPE>
+                    </SW-ADDR-METHOD>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="9257d2dd-be96-4074-94bd-462a06041b5d">
+                  <SHORT-NAME>ConstantSpecifications</SHORT-NAME>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

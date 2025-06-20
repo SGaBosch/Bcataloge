@@ -1,0 +1,103 @@
+<annotationDefinition fileVersion="1" annotationtype="Report Annotation">
+  <uid>4ff6da79-d0d7-4c6b-9cc3-a2f3442e4b77</uid>
+  <id>MXAM_Annotation_ActiveReturnCheck_sm</id>
+  <version>1</version>
+  <annotations>
+    <annotation id="Report Annotation 3_09/04/2024 18:43:47" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="GGH1COB" domain="APAC"/>
+      <date>2024-09-04T18:43:47.655+0530</date>
+      <modifiedDate>2024-09-04T18:45:05.660+0530</modifiedDate>
+      <comment>Inport of server calls will expected to remian unused because of Inject blocks</comment>
+      <checks>
+        <check>AS_Guidelines_from_MES/MES Functional Safety Modeling Guidelines/Model Architecture Principles / Enforcement of Low Complexity/mes_arch_1306/matlab_mxray_1306</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/9.1.0" artifactName="ActiveReturnCheck_sm" elementIdentifier="ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck/ActRetI_Satn/CalibrationData,&#10;CalibrationData,&#10;block,&#10;BoundCheck_BAD: The percentage of globally unused inputs is 100.0, which is above the configured upper bound of 90." name="CalibrationData" path="ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck/ActRetI_Satn/CalibrationData" qualifier="block" sid="15713" version="5.1.0.xMessage">
+    <message messageId="BoundCheck_BAD" messageText="The percentage of globally unused inputs is 100.0, which is above the configured upper bound of 90.">
+        <messageParameter>percentage of globally unused inputs</messageParameter>
+        <messageParameter>100.0</messageParameter>
+        <messageParameter>90</messageParameter>
+    </message>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Failed</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck</artifact>
+        <name>CalibrationData</name>
+        <path>ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck/ActRetI_Satn/CalibrationData</path>
+        <checkId>matlab_mxray_1306</checkId>
+        <message>The percentage of globally unused inputs is 100.0, which is above the configured upper bound of 90.</message>
+        <messageId>BoundCheck_BAD</messageId>
+        <qualifier>block</qualifier>
+        <result>FAILED</result>
+      </finding>
+    </annotation>
+    <annotation id="Report Annotation 2_09/04/2024 18:43:47" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="GGH1COB" domain="APAC"/>
+      <date>2024-09-04T18:43:47.655+0530</date>
+      <modifiedDate>2024-09-04T18:45:05.660+0530</modifiedDate>
+      <comment>Inport of server calls will expected to remian unused because of Inject blocks</comment>
+      <checks>
+        <check>AS_Guidelines_from_MES/MES Functional Safety Modeling Guidelines/Model Architecture Principles / Enforcement of Low Complexity/mes_arch_1306/matlab_mxray_1306</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/9.1.0" artifactName="ActiveReturnCheck_sm" elementIdentifier="ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck/ActRetI_Satn/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnSteerAng,&#10;SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnSteerAng,&#10;block,&#10;BoundCheck_BAD: The percentage of globally unused inputs is 100.0, which is above the configured upper bound of 90." name="SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnSteerAng" path="ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck/ActRetI_Satn/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnSteerAng" qualifier="block" sid="16600" version="5.1.0.xMessage">
+    <message messageId="BoundCheck_BAD" messageText="The percentage of globally unused inputs is 100.0, which is above the configured upper bound of 90.">
+        <messageParameter>percentage of globally unused inputs</messageParameter>
+        <messageParameter>100.0</messageParameter>
+        <messageParameter>90</messageParameter>
+    </message>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Failed</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck</artifact>
+        <name>SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnSteerAng</name>
+        <path>ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck/ActRetI_Satn/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnSteerAng</path>
+        <checkId>matlab_mxray_1306</checkId>
+        <message>The percentage of globally unused inputs is 100.0, which is above the configured upper bound of 90.</message>
+        <messageId>BoundCheck_BAD</messageId>
+        <qualifier>block</qualifier>
+        <result>FAILED</result>
+      </finding>
+    </annotation>
+    <annotation id="Report Annotation 1_09/04/2024 18:43:47" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="GGH1COB" domain="APAC"/>
+      <date>2024-09-04T18:43:47.655+0530</date>
+      <modifiedDate>2024-09-04T18:45:05.660+0530</modifiedDate>
+      <comment>Inport of server calls will expected to remian unused because of Inject blocks</comment>
+      <checks>
+        <check>AS_Guidelines_from_MES/MES Functional Safety Modeling Guidelines/Model Architecture Principles / Enforcement of Low Complexity/mes_arch_1306/matlab_mxray_1306</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/9.1.0" artifactName="ActiveReturnCheck_sm" elementIdentifier="ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck/ActRetI_Satn/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnVehSpd,&#10;SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnVehSpd,&#10;block,&#10;BoundCheck_BAD: The percentage of globally unused inputs is 100.0, which is above the configured upper bound of 90." name="SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnVehSpd" path="ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck/ActRetI_Satn/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnVehSpd" qualifier="block" sid="16608" version="5.1.0.xMessage">
+    <message messageId="BoundCheck_BAD" messageText="The percentage of globally unused inputs is 100.0, which is above the configured upper bound of 90.">
+        <messageParameter>percentage of globally unused inputs</messageParameter>
+        <messageParameter>100.0</messageParameter>
+        <messageParameter>90</messageParameter>
+    </message>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Failed</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck</artifact>
+        <name>SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnVehSpd</name>
+        <path>ActiveReturnCheck_sm/ActiveReturnCheck/Subsystem/ActiveReturnCheck/ActRetI_Satn/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnVehSpd</path>
+        <checkId>matlab_mxray_1306</checkId>
+        <message>The percentage of globally unused inputs is 100.0, which is above the configured upper bound of 90.</message>
+        <messageId>BoundCheck_BAD</messageId>
+        <qualifier>block</qualifier>
+        <result>FAILED</result>
+      </finding>
+    </annotation>
+  </annotations>
+</annotationDefinition>

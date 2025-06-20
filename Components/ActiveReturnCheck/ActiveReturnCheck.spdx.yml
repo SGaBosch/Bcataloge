@@ -1,0 +1,28 @@
+SPDXID: SPDXRef-DOCUMENT
+creationInfo:
+  comment: Automatically updated with bdi-spdx-updater
+  created: '2025-06-03T14:25:27Z'
+  creators:
+  - 'Organization: Robert Bosch Automotive Steering GmbH'
+dataLicense: CC0-1.0
+documentNamespace: spdx://SPDXRef-Product-bosch.product.swelement-com.bosch.mobility.steering.platform-ActiveReturnCheck-1.0.7-283ba4c6c4b44b8384ba36a60b2fe2c5
+name: ActiveReturnCheck
+packages:
+- SPDXID: SPDXRef-Product-bosch.product.swelement-com.bosch.mobility.steering.platform-ActiveReturnCheck-1.0.7
+  copyrightText: NOASSERTION
+  downloadLocation: NOASSERTION
+  externalRefs:
+  - referenceCategory: PACKAGE-MANAGER
+    referenceLocator: pkg:bosch.product.swelement/com/bosch/mobility/steering/platform/ActiveReturnCheck@1.0.7
+    referenceType: purl
+  filesAnalyzed: false
+  licenseConcluded: NOASSERTION
+  licenseDeclared: NOASSERTION
+  name: ActiveReturnCheck
+  supplier: 'Organization: Robert Bosch Automotive Steering GmbH'
+  versionInfo: 1.0.7
+relationships:
+- relatedSpdxElement: SPDXRef-Product-bosch.product.swelement-com.bosch.mobility.steering.platform-ActiveReturnCheck-1.0.7
+  relationshipType: DESCRIBES
+  spdxElementId: SPDXRef-DOCUMENT
+spdxVersion: SPDX-2.3

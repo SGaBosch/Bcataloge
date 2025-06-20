@@ -1,0 +1,119 @@
+<annotationDefinition fileVersion="1" annotationtype="Report Annotation">
+  <uid>67759ec5-095c-43bc-af2c-a2f68ec3ce43</uid>
+  <id>MXAM_Annotation_ActiveReturn_sm</id>
+  <version>1</version>
+  <annotations>
+    <annotation id="Report Annotation 1_05/12/2023 10:58:06" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="TPC1COB" domain="APAC"/>
+      <date>05/12/2023 10:58:06</date>
+      <modifiedDate>05/12/2023 10:58:53</modifiedDate>
+      <comment>It is AS block library and it is added for testing purpose.</comment>
+      <checks>
+        <check>AS_Guidelines_from_Standards/MISRA AC TL/Block Specific/misra_tl_5_10/mcheck_misra_tl_5_10</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/7.1.0" artifactName="ActiveReturn_sm" elementIdentifier="ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_CalcActvRetTrq/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetSteerSpdFactDepOnDrvr/Src/SteerSpdFactDepOnDrvr/DR_INJECT_SteerSpdFactDepOnDrvr,&#10;DR_INJECT_SteerSpdFactDepOnDrvr,&#10;block,&#10;&lt;Id not set&gt;: This Custom Code block does not have the option 'Use production code for floating-point simulation'." name="DR_INJECT_SteerSpdFactDepOnDrvr" path="ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_CalcActvRetTrq/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetSteerSpdFactDepOnDrvr/Src/SteerSpdFactDepOnDrvr/DR_INJECT_SteerSpdFactDepOnDrvr" qualifier="block" sid="20554" version="5.1.0.xMessage">
+    <message messageId="&lt;Id not set&gt;" messageText="This Custom Code block does not have the option 'Use production code for floating-point simulation'."/>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Review</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn</artifact>
+        <name>DR_INJECT_SteerSpdFactDepOnDrvr</name>
+        <path>ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_CalcActvRetTrq/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetSteerSpdFactDepOnDrvr/Src/SteerSpdFactDepOnDrvr/DR_INJECT_SteerSpdFactDepOnDrvr</path>
+        <checkId>mcheck_misra_tl_5_10</checkId>
+        <message><![CDATA[This Custom Code block does not have the option &apos;Use production code for floating-point simulation&apos;.]]></message>
+        <messageId><![CDATA[&lt;Id not set&gt;]]></messageId>
+        <qualifier>block</qualifier>
+        <result>REVIEW</result>
+      </finding>
+    </annotation>
+    <annotation id="Report Annotation 4_05/12/2023 10:58:06" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="TPC1COB" domain="APAC"/>
+      <date>05/12/2023 10:58:06</date>
+      <modifiedDate>05/12/2023 10:58:53</modifiedDate>
+      <comment>It is AS block library and it is added for testing purpose.</comment>
+      <checks>
+        <check>AS_Guidelines_from_Standards/MISRA AC TL/Block Specific/misra_tl_5_10/mcheck_misra_tl_5_10</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/7.1.0" artifactName="ActiveReturn_sm" elementIdentifier="ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_InterpolCharacteristics/SSCP_RP_ProvideParameters_Get_xActRet_MotorTorqueGain_XAU16/Src/INJECT_MotTrqGain/DR_INJECT_MotTrqGain,&#10;DR_INJECT_MotTrqGain,&#10;block,&#10;&lt;Id not set&gt;: This Custom Code block does not have the option 'Use production code for floating-point simulation'." name="DR_INJECT_MotTrqGain" path="ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_InterpolCharacteristics/SSCP_RP_ProvideParameters_Get_xActRet_MotorTorqueGain_XAU16/Src/INJECT_MotTrqGain/DR_INJECT_MotTrqGain" qualifier="block" sid="20568" version="5.1.0.xMessage">
+    <message messageId="&lt;Id not set&gt;" messageText="This Custom Code block does not have the option 'Use production code for floating-point simulation'."/>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Review</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn</artifact>
+        <name>DR_INJECT_MotTrqGain</name>
+        <path>ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_InterpolCharacteristics/SSCP_RP_ProvideParameters_Get_xActRet_MotorTorqueGain_XAU16/Src/INJECT_MotTrqGain/DR_INJECT_MotTrqGain</path>
+        <checkId>mcheck_misra_tl_5_10</checkId>
+        <message><![CDATA[This Custom Code block does not have the option &apos;Use production code for floating-point simulation&apos;.]]></message>
+        <messageId><![CDATA[&lt;Id not set&gt;]]></messageId>
+        <qualifier>block</qualifier>
+        <result>REVIEW</result>
+      </finding>
+    </annotation>
+    <annotation id="Report Annotation 3_05/12/2023 10:58:06" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="TPC1COB" domain="APAC"/>
+      <date>05/12/2023 10:58:06</date>
+      <modifiedDate>05/12/2023 10:58:53</modifiedDate>
+      <comment>It is AS block library and it is added for testing purpose.</comment>
+      <checks>
+        <check>AS_Guidelines_from_Standards/MISRA AC TL/Block Specific/misra_tl_5_10/mcheck_misra_tl_5_10</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/7.1.0" artifactName="ActiveReturn_sm" elementIdentifier="ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_CalcActvRetTrq/CalcActiveReturnTorque/CalculateNominalSteeringAngleSpeed/InterpolationOverSteeringAngle/SSCP_RP_ProvideParameters_Get_vActRet_NominalSteeringSpeed_XAU16/Src/vActRetNominalSteeringSpeed/DR_INJECT_vActRetNominalSteeringSpeed,&#10;DR_INJECT_vActRetNominalSteeringSpeed,&#10;block,&#10;&lt;Id not set&gt;: This Custom Code block does not have the option 'Use production code for floating-point simulation'." name="DR_INJECT_vActRetNominalSteeringSpeed" path="ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_CalcActvRetTrq/CalcActiveReturnTorque/CalculateNominalSteeringAngleSpeed/InterpolationOverSteeringAngle/SSCP_RP_ProvideParameters_Get_vActRet_NominalSteeringSpeed_XAU16/Src/vActRetNominalSteeringSpeed/DR_INJECT_vActRetNominalSteeringSpeed" qualifier="block" sid="20547" version="5.1.0.xMessage">
+    <message messageId="&lt;Id not set&gt;" messageText="This Custom Code block does not have the option 'Use production code for floating-point simulation'."/>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Review</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn</artifact>
+        <name>DR_INJECT_vActRetNominalSteeringSpeed</name>
+        <path>ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_CalcActvRetTrq/CalcActiveReturnTorque/CalculateNominalSteeringAngleSpeed/InterpolationOverSteeringAngle/SSCP_RP_ProvideParameters_Get_vActRet_NominalSteeringSpeed_XAU16/Src/vActRetNominalSteeringSpeed/DR_INJECT_vActRetNominalSteeringSpeed</path>
+        <checkId>mcheck_misra_tl_5_10</checkId>
+        <message><![CDATA[This Custom Code block does not have the option &apos;Use production code for floating-point simulation&apos;.]]></message>
+        <messageId><![CDATA[&lt;Id not set&gt;]]></messageId>
+        <qualifier>block</qualifier>
+        <result>REVIEW</result>
+      </finding>
+    </annotation>
+    <annotation id="Report Annotation 2_05/12/2023 10:58:06" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="TPC1COB" domain="APAC"/>
+      <date>05/12/2023 10:58:06</date>
+      <modifiedDate>05/12/2023 10:58:53</modifiedDate>
+      <comment>It is AS block library and it is added for testing purpose.</comment>
+      <checks>
+        <check>AS_Guidelines_from_Standards/MISRA AC TL/Block Specific/misra_tl_5_10/mcheck_misra_tl_5_10</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/7.1.0" artifactName="ActiveReturn_sm" elementIdentifier="ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_CalcActvRetTrq/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetRetTrqFactDepOnDrvr/Src/RetTrqFactDepOnDrvr/DR_INJECT_xActRet_RetTorqueFactDepOnDriver,&#10;DR_INJECT_xActRet_RetTorqueFactDepOnDriver,&#10;block,&#10;&lt;Id not set&gt;: This Custom Code block does not have the option 'Use production code for floating-point simulation'." name="DR_INJECT_xActRet_RetTorqueFactDepOnDriver" path="ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_CalcActvRetTrq/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetRetTrqFactDepOnDrvr/Src/RetTrqFactDepOnDrvr/DR_INJECT_xActRet_RetTorqueFactDepOnDriver" qualifier="block" sid="20561" version="5.1.0.xMessage">
+    <message messageId="&lt;Id not set&gt;" messageText="This Custom Code block does not have the option 'Use production code for floating-point simulation'."/>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Review</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn</artifact>
+        <name>DR_INJECT_xActRet_RetTorqueFactDepOnDriver</name>
+        <path>ActiveReturn_sm/ActiveReturn/Subsystem/ActiveReturn/ActRetI_CalcActvRetTrq/CalibrationData/SSCP_RP_ActvRetProvParameters_Get_ActvRetRetTrqFactDepOnDrvr/Src/RetTrqFactDepOnDrvr/DR_INJECT_xActRet_RetTorqueFactDepOnDriver</path>
+        <checkId>mcheck_misra_tl_5_10</checkId>
+        <message><![CDATA[This Custom Code block does not have the option &apos;Use production code for floating-point simulation&apos;.]]></message>
+        <messageId><![CDATA[&lt;Id not set&gt;]]></messageId>
+        <qualifier>block</qualifier>
+        <result>REVIEW</result>
+      </finding>
+    </annotation>
+  </annotations>
+</annotationDefinition>

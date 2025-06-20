@@ -1,0 +1,35 @@
+// ----------------------------------------------------------------------------
+//  Copyright (c) Robert Bosch Automotive Steering GmbH, Germany
+//                All rights reserved
+// ----------------------------------------------------------------------------
+
+
+sg_funktion ActiveReturn_L_Adapter
+{
+
+   fkt_bezeichner ActiveReturn_L_Adapter
+   {
+      deutsch  "Active Return L Adapter";
+      englisch "Active Return L Adapter";
+   }
+
+// -----------------------------------------------------------------------------
+// RAM-Groessen
+// -----------------------------------------------------------------------------
+   ram_groesse mActRet_MotTrqSaturated_xds16
+   {
+      umrechnung 		MMOT;
+      codesyntax 		csyGLRAMREDsw;
+      datentyp 		sw;
+      minp_w         -3;
+      maxp_w         3;
+      init_wertp     {0};
+   }
+   ram_bezeichner mActRet_MotTrqSaturated_xds16
+   {
+      deutsch  "saturated motor torque";
+      englisch "saturated motor torque";
+   }
+}
+
+

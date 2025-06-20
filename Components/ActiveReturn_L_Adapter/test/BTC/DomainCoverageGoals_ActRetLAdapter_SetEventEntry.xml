@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="[0.0] (0.0 4.294967295E9]" identifier="INPUT:PrestoreData_Val:par" display_name="PrestoreData_Val"/>
+  <RangeDefinition range="[0.0 293.0) [293.0] (293.0 65535.0]" identifier="INPUT:MonID_Val:par" display_name="MonID_Val"/>
+  <RangeDefinition range="[0.0] [1.0] (1.0 255.0]" identifier="INPUT:MonStatus_Val:par" display_name="MonStatus_Val"/>
+</RangeDefinitions>

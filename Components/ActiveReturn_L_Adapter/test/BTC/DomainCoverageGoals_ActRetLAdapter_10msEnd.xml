@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="[-32.0 -3.0009765625) [-3.0 3.0] (3.0009765625 31.9990234375]" identifier="INPUT:Rte_ActiveReturn_L_Adapter_RP_ActvRetMotTrq_ActvRetMotTrq:var" display_name="Rte_ActiveReturn_L_Adapter_RP_ActvRetMotTrq_ActvRetMotTrq"/>
+</RangeDefinitions>

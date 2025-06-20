@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wrapper>
+        <init parameters="/* void */">ai_stubs_init</init>
+        <task parameters="&amp;MaxMotTrqDepOnSteerAng_Val,AbsSteerAng">ActRetCdp_ProvideMaxMotorTorqueDepOnSteeringAngle</task>
+        <task parameters="&amp;SteerSpdFact_Val">ActRetCdp_ProvideSteeringSpeedFact</task>
+        <task parameters="&amp;SteerSpdFactDepOnDrvr_Val,AbsDrvrTrq,AbsAvgVehSpd">ActRetCdp_ProvideSteerSpeedFactDepOnDriver</task>
+        <task parameters="&amp;MaxMotTrqAftLoadFac_Val">ActiveReturnCdp_ActRetCdp_Prov_MaxMotTrqAftLoadFac</task>
+        <task parameters="&amp;SteerSpdAmp_Val">ActRetCdp_ProvideSteeringSpeedAmp</task>
+        <task parameters="&amp;NomSteerSpd_Val,AbsAvgVehSpd,AbsSteerAng">ActRetCdp_ProvideNominalSteeringSpeed</task>
+        <task parameters="&amp;SteerSpdGradAftInvld_Val">ActRetCdp_ProvideSteerSpeedGradAfterInvalid</task>
+        <task parameters="&amp;FilFac_Val">ActRetCdp_ProvideFilterFactor</task>
+        <task parameters="&amp;RetTrqFactDepOnDrvr_Val,AbsDrvrTrq,AbsAvgVehSpd">ActRetCdp_ProvideRetTorqueFactDepOnDriver</task>
+        <task parameters="&amp;MaxTBT4ShtDwn_Val">ActRetCdp_ProvideMaxTBT4ShutDown</task>
+        <task parameters="&amp;MaxMotTrqDepOnVehSpd_Val,AbsMaxSafeVehSpd">ActRetCdp_ProvideMaxMotorTorqueDepOnVehSpeed</task>
+        <task parameters="&amp;MotTrqGain_Val,AbsAvgVehSpd">ActRetCdp_ProvideMotorTorqueGain</task>
+        <task parameters="&amp;MaxMotTrq_Val">ActRetCdp_ProvideMaxMotorTorque</task>
+</wrapper>

@@ -1,0 +1,12 @@
+\comps_repo\ActiveReturn\components\ActiveReturn\src\IActRet_Main_pp.kgt
+\comps_repo\ActiveReturn\components\ActiveReturnCheck\src\IActiveReturnCheck_pp.kgt
+\comps_repo\SubConnector\components\FactorMinimizer\src\IFactorMinimizer_pp.kgt
+\sgdcc_eps_sdk\epsdrivesw\implementationset\Application\SystemAbstraction\ApplicationInterface\IApplicationInterface_ccfcc_pp.kgt
+\comps_repo\VehicleSpeedCalculation\components\VehicleSpeedCheck\src\IVehSp_Check_pp.kgt
+\comps_repo\VehicleSpeedCalculation\components\VehicleSpeedAverage\src\IVehSp_Avg_pp.kgt
+\comps_repo\TorqueSignalConditioning\components\TorqueSignalConditioningMain\src\ITrqSigCond_pp.kgt
+\comps_repo\TorqueSignalConditioning\components\TorqueSignalConditioningCheck\src\ITrqSigCondCheck_pp.kgt
+\comps_repo\ISW\HardwareLibrary\components\HwLibWrapper\src\HwWrapper.kgt
+\comps_repo\ActiveReturn\components\ActiveReturn_L_Adapter\src\IActiveReturn_L_Adapter_pp.kgt
+\comps_repo\ActiveReturn\components\ActiveReturn_L_Adapter\src\ActiveReturn_L_Adapter_pp.kgt
+\comps_repo\CompensateIncreasedFriction\components\CompensateIncreasedFriction\src\ICompensateIncreasedFriction_pp.kgt

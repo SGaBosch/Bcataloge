@@ -1,0 +1,119 @@
+<annotationDefinition fileVersion="1" annotationtype="Report Annotation">
+  <uid>43b86607-28ee-4408-a0f2-1712ff7137a3</uid>
+  <id>MXAM_Annotation_ActiveReturn_L_Adapter_sm</id>
+  <version>1</version>
+  <annotations>
+    <annotation id="Report Annotation 1_10/18/2022 16:25:08" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="MAO3BP" domain="EMEA"/>
+      <date>10/18/2022 16:25:08</date>
+      <modifiedDate>10/18/2022 16:27:54</modifiedDate>
+      <comment>The same signal scheduled differently merges back. No signal name change is needed.</comment>
+      <checks>
+        <check>AS_Own_Guidelines/BOSCH AS Guidelines/as_005/mcheck_as_005</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/7.1.0" artifactName="ActiveReturn_L_Adapter_sm" elementIdentifier="ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_100msStart/vVehSpI_AbsAvgVehSpd_sc,&#10;PP_vVehSpI_AbsAvgVehSpd_xdu16,&#10;line,&#10;&lt;Id not set&gt;: Signal name &quot;PP_vVehSpI_AbsAvgVehSpd_xdu16&quot; is not unique. It appears 3 times within the domain ActiveReturn_L_Adapter_sm\n\n1: in system ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_100msStart emenating from block vVehSpI_AbsAvgVehSpd_sc\n\n2: in system ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_10msStart emenating from block vVehSpI_AbsAvgVehSpd_sc\n\n3: in system ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter emenating from block Merge\n\nNote: the link will only take you to the first instance." name="PP_vVehSpI_AbsAvgVehSpd_xdu16" path="ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_100msStart/vVehSpI_AbsAvgVehSpd_sc" qualifier="line" sid="" version="5.1.0.xMessage">
+    <message messageId="&lt;Id not set&gt;" messageText="Signal name &quot;PP_vVehSpI_AbsAvgVehSpd_xdu16&quot; is not unique. It appears 3 times within the domain ActiveReturn_L_Adapter_sm\n\n1: in system ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_100msStart emenating from block vVehSpI_AbsAvgVehSpd_sc\n\n2: in system ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_10msStart emenating from block vVehSpI_AbsAvgVehSpd_sc\n\n3: in system ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter emenating from block Merge\n\nNote: the link will only take you to the first instance."/>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Failed</from>
+        <to>Review</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter</artifact>
+        <name>PP_vVehSpI_AbsAvgVehSpd_xdu16</name>
+        <path>ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_100msStart/vVehSpI_AbsAvgVehSpd_sc</path>
+        <checkId>mcheck_as_005</checkId>
+        <message><![CDATA[Signal name &quot;PP_vVehSpI_AbsAvgVehSpd_xdu16&quot; is not unique. It appears 3 times within the domain ActiveReturn_L_Adapter_sm\n\n1: in system ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_100msStart emenating from block vVehSpI_AbsAvgVehSpd_sc\n\n2: in system ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_10msStart emenating from block vVehSpI_AbsAvgVehSpd_sc\n\n3: in system ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter emenating from block Merge\n\nNote: the link will only take you to the first instance.]]></message>
+        <messageId><![CDATA[&lt;Id not set&gt;]]></messageId>
+        <qualifier>line</qualifier>
+        <result>FAILED</result>
+      </finding>
+    </annotation>
+    <annotation id="Report Annotation 3_05/12/2023 12:15:14" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="GGH1COB" domain="APAC"/>
+      <date>05/12/2023 12:15:14</date>
+      <modifiedDate>05/12/2023 12:19:56</modifiedDate>
+      <comment>It is AS library and it is added for testing purpose</comment>
+      <checks>
+        <check>AS_Guidelines_from_Standards/MISRA AC TL/Block Specific/misra_tl_5_10/mcheck_misra_tl_5_10</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/7.1.0" artifactName="ActiveReturn_L_Adapter_sm" elementIdentifier="ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_SetEventEntry/EvtHstI_HlSetEventEntry/TUNNEL_SetEvt_y_PrestoreData/DW_TUNNEL_SetEvt_y_PrestoreData,&#10;DW_TUNNEL_SetEvt_y_PrestoreData,&#10;block,&#10;&lt;Id not set&gt;: This Custom Code block does not have the option 'Use production code for floating-point simulation'." name="DW_TUNNEL_SetEvt_y_PrestoreData" path="ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_SetEventEntry/EvtHstI_HlSetEventEntry/TUNNEL_SetEvt_y_PrestoreData/DW_TUNNEL_SetEvt_y_PrestoreData" qualifier="block" sid="15543" version="5.1.0.xMessage">
+    <message messageId="&lt;Id not set&gt;" messageText="This Custom Code block does not have the option 'Use production code for floating-point simulation'."/>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Review</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter</artifact>
+        <name>DW_TUNNEL_SetEvt_y_PrestoreData</name>
+        <path>ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_SetEventEntry/EvtHstI_HlSetEventEntry/TUNNEL_SetEvt_y_PrestoreData/DW_TUNNEL_SetEvt_y_PrestoreData</path>
+        <checkId>mcheck_misra_tl_5_10</checkId>
+        <message><![CDATA[This Custom Code block does not have the option &apos;Use production code for floating-point simulation&apos;.]]></message>
+        <messageId><![CDATA[&lt;Id not set&gt;]]></messageId>
+        <qualifier>block</qualifier>
+        <result>REVIEW</result>
+      </finding>
+    </annotation>
+    <annotation id="Report Annotation 2_05/12/2023 12:15:14" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="GGH1COB" domain="APAC"/>
+      <date>05/12/2023 12:15:14</date>
+      <modifiedDate>05/12/2023 12:19:56</modifiedDate>
+      <comment>It is AS library and it is added for testing purpose</comment>
+      <checks>
+        <check>AS_Guidelines_from_Standards/MISRA AC TL/Block Specific/misra_tl_5_10/mcheck_misra_tl_5_10</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/7.1.0" artifactName="ActiveReturn_L_Adapter_sm" elementIdentifier="ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_SetEventEntry/EvtHstI_HlSetEventEntry/TUNNEL_SetEvt_y_MonitorID/DW_TUNNEL_SetEvt_y_MonitorID,&#10;DW_TUNNEL_SetEvt_y_MonitorID,&#10;block,&#10;&lt;Id not set&gt;: This Custom Code block does not have the option 'Use production code for floating-point simulation'." name="DW_TUNNEL_SetEvt_y_MonitorID" path="ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_SetEventEntry/EvtHstI_HlSetEventEntry/TUNNEL_SetEvt_y_MonitorID/DW_TUNNEL_SetEvt_y_MonitorID" qualifier="block" sid="15536" version="5.1.0.xMessage">
+    <message messageId="&lt;Id not set&gt;" messageText="This Custom Code block does not have the option 'Use production code for floating-point simulation'."/>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Review</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter</artifact>
+        <name>DW_TUNNEL_SetEvt_y_MonitorID</name>
+        <path>ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_SetEventEntry/EvtHstI_HlSetEventEntry/TUNNEL_SetEvt_y_MonitorID/DW_TUNNEL_SetEvt_y_MonitorID</path>
+        <checkId>mcheck_misra_tl_5_10</checkId>
+        <message><![CDATA[This Custom Code block does not have the option &apos;Use production code for floating-point simulation&apos;.]]></message>
+        <messageId><![CDATA[&lt;Id not set&gt;]]></messageId>
+        <qualifier>block</qualifier>
+        <result>REVIEW</result>
+      </finding>
+    </annotation>
+    <annotation id="Report Annotation 1_05/12/2023 12:15:14" adapterId="com.modelengineers.mxam.tooladapter.matlab">
+      <author username="GGH1COB" domain="APAC"/>
+      <date>05/12/2023 12:15:14</date>
+      <modifiedDate>05/12/2023 12:19:56</modifiedDate>
+      <comment>It is AS library and it is added for testing purpose</comment>
+      <checks>
+        <check>AS_Guidelines_from_Standards/MISRA AC TL/Block Specific/misra_tl_5_10/mcheck_misra_tl_5_10</check>
+      </checks>
+      <mappedProject>AS Project for MXAM </mappedProject>
+      <mapping>
+        <xElementIdentifier conversionTargetId="matlab.XMatlabElementIdentifier" marshaller="emf"><![CDATA[<XMatlab:XMatlabElementIdentifier xmlns:XMatlab="platform:/resource/com.modelengineers.mxam.tooladapter.matlab/models/domain/matlab/7.1.0" artifactName="ActiveReturn_L_Adapter_sm" elementIdentifier="ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_SetEventEntry/EvtHstI_HlSetEventEntry/TUNNEL_SetEvt_s_MonitorStatus/DW_TUNNEL_SetEvt_s_MonitorStatus,&#10;DW_TUNNEL_SetEvt_s_MonitorStatus,&#10;block,&#10;&lt;Id not set&gt;: This Custom Code block does not have the option 'Use production code for floating-point simulation'." name="DW_TUNNEL_SetEvt_s_MonitorStatus" path="ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_SetEventEntry/EvtHstI_HlSetEventEntry/TUNNEL_SetEvt_s_MonitorStatus/DW_TUNNEL_SetEvt_s_MonitorStatus" qualifier="block" sid="15529" version="5.1.0.xMessage">
+    <message messageId="&lt;Id not set&gt;" messageText="This Custom Code block does not have the option 'Use production code for floating-point simulation'."/>
+</XMatlab:XMatlabElementIdentifier>
+]]></xElementIdentifier>
+        <from>Review</from>
+        <to>Passed</to>
+      </mapping>
+      <finding>
+        <artifact>ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter</artifact>
+        <name>DW_TUNNEL_SetEvt_s_MonitorStatus</name>
+        <path>ActiveReturn_L_Adapter_sm/ActiveReturn_L_Adapter/Subsystem/ActiveReturn_L_Adapter/ActRetLAdapter_SetEventEntry/EvtHstI_HlSetEventEntry/TUNNEL_SetEvt_s_MonitorStatus/DW_TUNNEL_SetEvt_s_MonitorStatus</path>
+        <checkId>mcheck_misra_tl_5_10</checkId>
+        <message><![CDATA[This Custom Code block does not have the option &apos;Use production code for floating-point simulation&apos;.]]></message>
+        <messageId><![CDATA[&lt;Id not set&gt;]]></messageId>
+        <qualifier>block</qualifier>
+        <result>REVIEW</result>
+      </finding>
+    </annotation>
+  </annotations>
+</annotationDefinition>

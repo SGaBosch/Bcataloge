@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RangeDefinitions>
+  <RangeDefinition range="[0.0 15.0]" identifier="INPUT:Rte_ActiveReturnCheck_RP_ActvRetProvParameters_Get_ActvRetMaxTBT4ShtDwn_MaxTBT4ShtDwn_Val:var" display_name="Rte_ActiveReturnCheck_RP_ActvRetProvParameters_Get_ActvRetMaxTBT4ShtDwn_MaxTBT4ShtDwn_Val"/>
+  <RangeDefinition range="[-32.0 -25.0) [-25.0 25.0] (25.0 31.9990234375]" identifier="INPUT:Rte_ActiveReturnCheck_RP_TorsBarTrq_TorsBarTrq:var" display_name="Rte_ActiveReturnCheck_RP_TorsBarTrq_TorsBarTrq"/>
+  <RangeDefinition range="[0.0 63.9990234375]" identifier="INPUT:INJECT_MaxMotorTorqueDepOnSteerAng:var" display_name="INJECT_MaxMotorTorqueDepOnSteerAng"/>
+  <RangeDefinition range="[-3.0 3.0]" identifier="INPUT:Rte_ActiveReturnCheck_RP_ActvRetMotTrq4Chk_ActvRetMotTrq4Chk:var" display_name="Rte_ActiveReturnCheck_RP_ActvRetMotTrq4Chk_ActvRetMotTrq4Chk"/>
+  <RangeDefinition range="[0.0 63.9990234375]" identifier="INPUT:INJECT_MaxMotorTorqueDepOnVehSpd:var" display_name="INJECT_MaxMotorTorqueDepOnVehSpd"/>
+  <RangeDefinition range="[-3276.8 -1000.0) [-1000.0 1000.0] (1000.0 3276.7]" identifier="INPUT:Rte_ActiveReturnCheck_RP_SteerAng_SteerAng:var" display_name="Rte_ActiveReturnCheck_RP_SteerAng_SteerAng"/>
+  <RangeDefinition range="[0.0 500.0] (500.0 1023.984375]" identifier="INPUT:Rte_ActiveReturnCheck_RP_VehSpd_AbsMaxSafeVehSpd:var" display_name="Rte_ActiveReturnCheck_RP_VehSpd_AbsMaxSafeVehSpd"/>
+</RangeDefinitions>

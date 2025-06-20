@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created with SystemDesk Release 2023-B (23.1p1)-->
+<AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Eps_Repository</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>ActiveReturn</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="3ec6f40b-8fa0-4678-841f-606a67cc8e9a">
+              <SHORT-NAME>ActiveReturnCheck</SHORT-NAME>
+              <ELEMENTS>
+                <APPLICATION-SW-COMPONENT-TYPE UUID="08da7c9a-a31d-4678-96b7-e531fcec3330">
+                  <SHORT-NAME>ActiveReturnCheck</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:taggedStringValue">
+                        <SD GID="ASIL">D</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <PORTS>
+                    <R-PORT-PROTOTYPE UUID="74d19c3f-7ba8-47b0-bdbe-dc97cddfb3e5">
+                      <SHORT-NAME>EcuState</SHORT-NAME>
+                      <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="cf3e0eb1-5d75-43c1-b8f8-df8dba7509d7">
+                      <SHORT-NAME>RP_ActvRetProvParameters</SHORT-NAME>
+                      <REQUIRED-COM-SPECS>
+                        <CLIENT-COM-SPEC>
+                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters/Get_ActvRetMaxMotTrqDepOnSteerAng</OPERATION-REF>
+                        </CLIENT-COM-SPEC>
+                        <CLIENT-COM-SPEC>
+                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters/Get_ActvRetMaxMotTrqDepOnVehSpd</OPERATION-REF>
+                        </CLIENT-COM-SPEC>
+                        <CLIENT-COM-SPEC>
+                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters/Get_ActvRetMaxTBT4ShtDwn</OPERATION-REF>
+                        </CLIENT-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="df3869e3-88f0-42d7-8ec7-058e93664045">
+                      <SHORT-NAME>RP_VehSpd</SHORT-NAME>
+                      <REQUIRED-COM-SPECS>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsMaxSafeVehSpd</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                          <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                          <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsAvgVehSpd</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                          <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                          <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="2c3dc78d-a402-4aed-a683-56bb247ec3db">
+                      <SHORT-NAME>RP_SteerAng</SHORT-NAME>
+                      <REQUIRED-COM-SPECS>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAng</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                          <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                          <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAngSt</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                          <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                          <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="d5ae750b-e5ad-4d54-9fa0-139ad32e0d0d">
+                      <SHORT-NAME>RP_ActvRetSetEveEntry</SHORT-NAME>
+                      <REQUIRED-COM-SPECS>
+                        <CLIENT-COM-SPEC>
+                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetSetEveEntry/Set_ActvRetEntry</OPERATION-REF>
+                        </CLIENT-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetSetEveEntry</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="059d6092-a2de-4def-9fe0-ff6ae82f2d27">
+                      <SHORT-NAME>RP_ActvRetDiagData</SHORT-NAME>
+                      <REQUIRED-COM-SPECS>
+                        <CLIENT-COM-SPEC>
+                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetDiagData/Set_ActvRetDiagData</OPERATION-REF>
+                        </CLIENT-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetDiagData</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="ce0c7579-3c60-432c-8284-808c812881c4">
+                      <SHORT-NAME>RP_ActvRetMotTrq4Chk</SHORT-NAME>
+                      <REQUIRED-COM-SPECS>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn/Interfaces/IF_ActvRetMotTrq4Chk/ActvRetMotTrq4Chk</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                          <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                          <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn/Interfaces/IF_ActvRetMotTrq4Chk</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="8d92e231-6f86-4a06-94b7-8b8e623e8685">
+                      <SHORT-NAME>RP_TorsBarTrq</SHORT-NAME>
+                      <REQUIRED-COM-SPECS>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_TorsBarTrq/TorsBarTrq</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                          <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                          <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_TorsBarTrq</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="b0a15772-d398-432d-8ebc-39045fa0bcf8">
+                      <SHORT-NAME>PP_ActvRetMotTrq</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <NONQUEUED-SENDER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/IF_ActvRetMotTrq/ActvRetMotTrq</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/IF_ActvRetMotTrq</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="e7ae8026-ce00-4a95-8694-8c3f20c76630">
+                      <SHORT-NAME>IB_ActiveReturnCheck</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Eps_Repository/ActiveReturn/ActiveReturnCdp/DataTypeMappingSets/DTMS_ActvRetCdp</DATA-TYPE-MAPPING-REF>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataTypeMappingSets/DTMS_ActvRetChk</DATA-TYPE-MAPPING-REF>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataTypeMappingSets/DTMS_ActvRet_L_Adpr</DATA-TYPE-MAPPING-REF>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/Eps_Repository/ActiveReturn/ActiveReturn/DataTypeMappingSets/DTMS_ActvRet</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <AR-TYPED-PER-INSTANCE-MEMORYS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="ab703dfa-44e3-48d1-94a1-f7677e6bc9d1">
+                          <SHORT-NAME>PIM_ActvRetDi</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetDi</TYPE-TREF>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </AR-TYPED-PER-INSTANCE-MEMORYS>
+                      <EVENTS>
+                        <TIMING-EVENT UUID="a0f67cb3-162b-4fd5-a51e-b36112c88fff">
+                          <SHORT-NAME>TE_ActiveReturnCheck_Mon</SHORT-NAME>
+                          <DISABLED-MODE-IREFS>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/EcuInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/ApplicationInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/PostRun</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/Error</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/ApplicationOff</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                          </DISABLED-MODE-IREFS>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/ActRetI_Mon</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
+                        <TIMING-EVENT UUID="031201cc-5e13-4dba-8726-cac1bb0394bb">
+                          <SHORT-NAME>TE_ActiveReturnCheck_DiSwt</SHORT-NAME>
+                          <DISABLED-MODE-IREFS>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/EcuInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/ApplicationInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/PostRun</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/Error</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/ApplicationOff</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                          </DISABLED-MODE-IREFS>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/ActRetI_DiSwt</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
+                        <TIMING-EVENT UUID="e4cbfad6-5377-41a3-bb91-d94b83166ee7">
+                          <SHORT-NAME>TE_ActiveReturnCheck_Satn</SHORT-NAME>
+                          <DISABLED-MODE-IREFS>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/EcuInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/ApplicationInit</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/PostRun</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/Error</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                            <DISABLED-MODE-IREF>
+                              <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/EcuState</CONTEXT-PORT-REF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/EcuState/ApplicationModes</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/ApplicationOff</TARGET-MODE-DECLARATION-REF>
+                            </DISABLED-MODE-IREF>
+                          </DISABLED-MODE-IREFS>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/ActRetI_Satn</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
+                      </EVENTS>
+                      <EXPLICIT-INTER-RUNNABLE-VARIABLES>
+                        <VARIABLE-DATA-PROTOTYPE UUID="6fd1b2e6-a1ba-4b99-8e29-2cf1353ea698">
+                          <SHORT-NAME>IRV_ActvRetMotTrqSatn</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetMotTrqSatn</TYPE-TREF>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </VARIABLE-DATA-PROTOTYPE>
+                        <VARIABLE-DATA-PROTOTYPE UUID="8833757c-cb7e-4afe-bb4e-bdbebe244c0c">
+                          <SHORT-NAME>IRV_ActvRetDi</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetDi</TYPE-TREF>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </VARIABLE-DATA-PROTOTYPE>
+                        <VARIABLE-DATA-PROTOTYPE UUID="c0db88fa-be3a-4fb9-a31b-72e769bae206">
+                          <SHORT-NAME>IRV_ActvRetMaxMotTrqMin</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetMaxMotTrqMin</TYPE-TREF>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </VARIABLE-DATA-PROTOTYPE>
+                        <VARIABLE-DATA-PROTOTYPE UUID="10dbba06-1247-477c-a16e-8ec4e00e0ba1">
+                          <SHORT-NAME>IRV_ActvRetAbsTorsBarTrqSat</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetAbsTorsBarTrqSat</TYPE-TREF>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </VARIABLE-DATA-PROTOTYPE>
+                        <VARIABLE-DATA-PROTOTYPE UUID="1dd4884d-db47-441d-81f2-682f993eaa53">
+                          <SHORT-NAME>IRV_ActvRetAbsMaxSafeVehSpdSat</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetAbsMaxSafeVehSpdSat</TYPE-TREF>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </VARIABLE-DATA-PROTOTYPE>
+                        <VARIABLE-DATA-PROTOTYPE UUID="75af7b28-ee14-4fa4-938e-0b4cefc669b3">
+                          <SHORT-NAME>IRV_ActvRetAbsSteerAngSat</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetAbsSteerAngSat</TYPE-TREF>
+                          <INIT-VALUE>
+                            <APPLICATION-VALUE-SPECIFICATION>
+                              <SHORT-LABEL>Value</SHORT-LABEL>
+                              <CATEGORY>VALUE</CATEGORY>
+                              <SW-VALUE-CONT>
+                                <SW-VALUES-PHYS>
+                                  <V>0</V>
+                                </SW-VALUES-PHYS>
+                              </SW-VALUE-CONT>
+                            </APPLICATION-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </EXPLICIT-INTER-RUNNABLE-VARIABLES>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="499db5cf-9c30-4132-95f0-ba2992c03a0d">
+                          <SHORT-NAME>ActRetI_Mon</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                            <VARIABLE-ACCESS UUID="36aa53f7-1b46-4a67-a577-b5459cc2d6c6">
+                              <SHORT-NAME>DRP_RP_TorsBarTrq_TorsBarTrq</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_TorsBarTrq</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_TorsBarTrq/TorsBarTrq</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="76808dd0-760a-4304-a7ef-6621121da3dc">
+                              <SHORT-NAME>DRP_RP_VehSpd_AbsMaxSafeVehSpd</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_VehSpd</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsMaxSafeVehSpd</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="89c2e93f-9475-4894-834b-0298e5f97ff0">
+                              <SHORT-NAME>DRP_RP_SteerAng_SteerAng</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_SteerAng</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAng</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                          <READ-LOCAL-VARIABLES>
+                            <VARIABLE-ACCESS UUID="e2b90662-e08e-48a2-b91f-de2b385d6f8d">
+                              <SHORT-NAME>IRVRA_IRV_ActvRetMotTrqSatn</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetMotTrqSatn</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="ea4a4a7a-949a-4d94-8018-0d917eabc3ea">
+                              <SHORT-NAME>IRVRA_IRV_ActvRetAbsTorsBarTrqSat</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetAbsTorsBarTrqSat</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="b91ad665-53f8-4f6d-914c-eaac7070d908">
+                              <SHORT-NAME>IRVRA_IRV_ActvRetMaxMotTrqMin</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetMaxMotTrqMin</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="4e66d621-9ffe-4207-b8e8-e6f27c2837ac">
+                              <SHORT-NAME>IRVRA_IRV_ActvRetAbsMaxSafeVehSpdSat</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetAbsMaxSafeVehSpdSat</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="9725f0b3-e5b7-4c45-b55b-38571c93a20e">
+                              <SHORT-NAME>IRVRA_IRV_ActvRetAbsSteerAngSat</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetAbsSteerAngSat</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </READ-LOCAL-VARIABLES>
+                          <SERVER-CALL-POINTS>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="b9749940-4391-4516-b85d-c8c5a535e901">
+                              <SHORT-NAME>SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnSteerAng</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_ActvRetProvParameters</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters/Get_ActvRetMaxMotTrqDepOnSteerAng</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="96a708ed-29aa-43f6-946a-b40213acd4cc">
+                              <SHORT-NAME>SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnVehSpd</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_ActvRetProvParameters</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters/Get_ActvRetMaxMotTrqDepOnVehSpd</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="830f69cf-27c2-48bf-a02f-5eea98693772">
+                              <SHORT-NAME>SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxTBT4ShtDwn</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_ActvRetProvParameters</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters/Get_ActvRetMaxTBT4ShtDwn</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="538580f8-45db-4a2b-848b-d5020bfc83c3">
+                              <SHORT-NAME>SSCP_RP_ActvRetSetEveEntry_ActvRetSet_Entry</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_ActvRetSetEveEntry</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetSetEveEntry/Set_ActvRetEntry</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="e34451e1-0781-4e55-abfa-b4da8bc09d12">
+                              <SHORT-NAME>SSCP_RP_ActvRetDiagData_Set_ActvRetDiagData</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_ActvRetDiagData</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_ActvRetDiagData/Set_ActvRetDiagData</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                          </SERVER-CALL-POINTS>
+                          <SYMBOL>ActRetI_Monitoring</SYMBOL>
+                          <WRITTEN-LOCAL-VARIABLES>
+                            <VARIABLE-ACCESS UUID="2802c468-d738-4f5f-a700-62d21d38e411">
+                              <SHORT-NAME>IRVWA_IRV_ActvRetDi</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetDi</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </WRITTEN-LOCAL-VARIABLES>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="d0b1a224-9893-47c7-ae3f-b23d3d1bcdfd">
+                          <SHORT-NAME>ActRetI_DiSwt</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <DATA-SEND-POINTS>
+                            <VARIABLE-ACCESS UUID="de84a1c0-8867-42ca-af67-31f637371692">
+                              <SHORT-NAME>DSP_PP_ActvRetMotTrq_ActvRetMotTrq</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/PP_ActvRetMotTrq</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/IF_ActvRetMotTrq/ActvRetMotTrq</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </DATA-SEND-POINTS>
+                          <READ-LOCAL-VARIABLES>
+                            <VARIABLE-ACCESS UUID="64000069-5872-4cf0-bcf1-3411a700cfa0">
+                              <SHORT-NAME>IRVRA_IRV_ActvRetDi</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetDi</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="919d3351-dc13-4014-b965-abc2ea7a818a">
+                              <SHORT-NAME>IRVRA_IRV_ActvRetMotTrqSatn</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetMotTrqSatn</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </READ-LOCAL-VARIABLES>
+                          <SYMBOL>ActRetI_DisableSwitch</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="e563055a-4e13-48c4-aad1-d859197cfacc">
+                          <SHORT-NAME>ActRetI_Satn</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                            <VARIABLE-ACCESS UUID="3019e96e-e24f-49e9-858d-0c424b14cfb5">
+                              <SHORT-NAME>DRP_RP_ActvRetMotTrq4Chk_ActvRetMotTrq4Chk</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_ActvRetMotTrq4Chk</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn/Interfaces/IF_ActvRetMotTrq4Chk/ActvRetMotTrq4Chk</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="04ea5b9b-9c7e-4b7c-8f47-320fd5ab4c7e">
+                              <SHORT-NAME>DRP_RP_TorsBarTrq_TorsBarTrq</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_TorsBarTrq</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_TorsBarTrq/TorsBarTrq</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="087af365-f46b-4541-93ed-f23c210dfc12">
+                              <SHORT-NAME>DRP_RP_SteerAng_SteerAng</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_SteerAng</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_SteerAng/SteerAng</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="2709c7d9-63d9-49be-bb28-2955b6299351">
+                              <SHORT-NAME>DRP_RP_VehSpd_AbsMaxSafeVehSpd</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_VehSpd</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/Interfaces/IF_VehSpd/AbsMaxSafeVehSpd</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                          <SERVER-CALL-POINTS>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="f07ed4be-f0a0-4cfd-94db-df67d72715d1">
+                              <SHORT-NAME>SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnSteerAng</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_ActvRetProvParameters</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters/Get_ActvRetMaxMotTrqDepOnSteerAng</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="eba1ec18-2ffb-4dd7-b54e-238a7fa31e4e">
+                              <SHORT-NAME>SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxMotTrqDepOnVehSpd</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_ActvRetProvParameters</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters/Get_ActvRetMaxMotTrqDepOnVehSpd</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="a599e860-5ae8-44e1-8a98-e03f833a484b">
+                              <SHORT-NAME>SSCP_RP_ActvRetProvParameters_Get_ActvRetMaxTBT4ShtDwn</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/RP_ActvRetProvParameters</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Eps_Repository/ActiveReturn/ActiveReturnCdp/Interfaces/IF_ActvRetProvParameters/Get_ActvRetMaxTBT4ShtDwn</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                          </SERVER-CALL-POINTS>
+                          <SYMBOL>ActRetI_Saturation</SYMBOL>
+                          <WRITTEN-LOCAL-VARIABLES>
+                            <VARIABLE-ACCESS UUID="e2c53ec1-1d5a-4640-9782-55fb0b2faad8">
+                              <SHORT-NAME>IRVWA_IRV_ActvRetMotTrqSatn</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetMotTrqSatn</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="45db1caf-ab01-4448-8a5a-674248cae052">
+                              <SHORT-NAME>IRVWA_IRV_ActvRetAbsTorsBarTrqSat</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetAbsTorsBarTrqSat</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="3498f79e-f03e-4e12-bfdb-b1fc7bebef95">
+                              <SHORT-NAME>IRVWA_IRV_ActvRetMaxMotTrqMin</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetMaxMotTrqMin</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="f7ab623b-73ff-4d68-b440-3b4e476ff437">
+                              <SHORT-NAME>IRVWA_IRV_ActvRetAbsMaxSafeVehSpdSat</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetAbsMaxSafeVehSpdSat</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="a59d856b-a8a0-4242-b16f-a09ed4a3317c">
+                              <SHORT-NAME>IRVWA_IRV_ActvRetAbsSteerAngSat</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ActiveReturnCheck/IB_ActiveReturnCheck/IRV_ActvRetAbsSteerAngSat</LOCAL-VARIABLE-REF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </WRITTEN-LOCAL-VARIABLES>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </APPLICATION-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="0802613c-ed40-4ea8-a84e-5fc41687f2a3">
+                  <SHORT-NAME>DataTypeMappingSets</SHORT-NAME>
+                  <ELEMENTS>
+                    <DATA-TYPE-MAPPING-SET UUID="4ce50e0d-142c-42ac-91e2-de00cb5c1e63">
+                      <SHORT-NAME>DTMS_ActvRetChk</SHORT-NAME>
+                      <DATA-TYPE-MAPS>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetDi</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ImplementationDataTypes/IDT_ActvRetDi</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetMotTrq</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ImplementationDataTypes/IDT_ActvRetMotTrq</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetMotTrqSatn</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ImplementationDataTypes/IDT_ActvRetMotTrqSatn</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetMaxMotTrqMin</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ImplementationDataTypes/IDT_ActvRetMaxMotTrqMin</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetAbsTorsBarTrqSat</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ImplementationDataTypes/IDT_ActvRetAbsTorsBarTrqSat</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetAbsMaxSafeVehSpdSat</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/ImplementationDataTypes/IDT_AbsMaxSafeVehSpd</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetAbsSteerAngSat</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ImplementationDataTypes/IDT_ActvRetAbsSteerAngSat</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_MonStatus</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ImplementationDataTypes/IDT_MonStatus</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_MonID</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ImplementationDataTypes/IDT_MonID</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                        <DATA-TYPE-MAP>
+                          <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_PrestoreData</APPLICATION-DATA-TYPE-REF>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ImplementationDataTypes/IDT_PrestoreData</IMPLEMENTATION-DATA-TYPE-REF>
+                        </DATA-TYPE-MAP>
+                      </DATA-TYPE-MAPS>
+                      <MODE-REQUEST-TYPE-MAPS>
+                        <MODE-REQUEST-TYPE-MAP>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes</MODE-GROUP-REF>
+                        </MODE-REQUEST-TYPE-MAP>
+                      </MODE-REQUEST-TYPE-MAPS>
+                    </DATA-TYPE-MAPPING-SET>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="542703bf-799f-4426-9c72-38f1f1a7a32b">
+                  <SHORT-NAME>Interfaces</SHORT-NAME>
+                  <ELEMENTS>
+                    <MODE-DECLARATION-GROUP UUID="e5798204-e4c2-4e2d-80f4-9f9f5a73c067">
+                      <SHORT-NAME>ApplicationModes</SHORT-NAME>
+                      <CATEGORY>ALPHABETIC_ORDER</CATEGORY>
+                      <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes/EcuInit</INITIAL-MODE-REF>
+                      <MODE-DECLARATIONS>
+                        <MODE-DECLARATION UUID="7a59f617-884a-47fd-aa37-a55f78f3c05e">
+                          <SHORT-NAME>ApplicationInit</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="9f164879-cb26-47c8-a94c-1a1c21cbe637">
+                          <SHORT-NAME>ApplicationOff</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="874ed06d-5247-428d-b093-2cd06d2f24b4">
+                          <SHORT-NAME>EcuInit</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="93a43a4f-aa1b-4441-82a0-3511622b5017">
+                          <SHORT-NAME>Error</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="38c1f407-1f15-4c8a-b2bf-4266eb77181e">
+                          <SHORT-NAME>FailOp</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="3c805523-a2ea-4eb6-8fcd-5667317954ff">
+                          <SHORT-NAME>Normal</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="b7a1ff22-3126-4e77-9fb2-3b361c4f5ac7">
+                          <SHORT-NAME>PostRun</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="48c93cf9-8a18-433d-a770-32c6c0160eac">
+                          <SHORT-NAME>Production</SHORT-NAME>
+                        </MODE-DECLARATION>
+                      </MODE-DECLARATIONS>
+                    </MODE-DECLARATION-GROUP>
+                    <MODE-SWITCH-INTERFACE UUID="cd8b99dd-127b-480f-beca-f6754020894f">
+                      <SHORT-NAME>EcuState</SHORT-NAME>
+                      <MODE-GROUP UUID="8084d002-9ec2-4f8e-a0f2-dc845a02eee2">
+                        <SHORT-NAME>ApplicationModes</SHORT-NAME>
+                        <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/ApplicationModes</TYPE-TREF>
+                      </MODE-GROUP>
+                    </MODE-SWITCH-INTERFACE>
+                    <SENDER-RECEIVER-INTERFACE UUID="52c36474-c095-4acc-89d0-78b48d330d50">
+                      <SHORT-NAME>IF_ActvRetMotTrq</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <DATA-ELEMENTS>
+                        <VARIABLE-DATA-PROTOTYPE UUID="d1a61643-e092-4aa7-a1b1-a86862d217b3">
+                          <SHORT-NAME>ActvRetMotTrq</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/Eps_Repository/ActiveReturn/ActiveReturnCheck/SWAddrMethod/DAMOS_RAM_DTA</SW-ADDR-METHOD-REF>
+                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                          <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetMotTrq</TYPE-TREF>
+                        </VARIABLE-DATA-PROTOTYPE>
+                      </DATA-ELEMENTS>
+                      <INVALIDATION-POLICYS>
+                        <INVALIDATION-POLICY>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/Interfaces/IF_ActvRetMotTrq/ActvRetMotTrq</DATA-ELEMENT-REF>
+                          <HANDLE-INVALID>KEEP</HANDLE-INVALID>
+                        </INVALIDATION-POLICY>
+                      </INVALIDATION-POLICYS>
+                    </SENDER-RECEIVER-INTERFACE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="c67b8eb4-b574-48ff-9878-33a2c2d1b63a">
+                  <SHORT-NAME>ApplicationDataTypes</SHORT-NAME>
+                  <ELEMENTS>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="cb018766-7058-4567-b0e3-df095eb4bf9a">
+                      <SHORT-NAME>ADT_ActvRetDi</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_ZU0</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetDi</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="55de81f0-66ec-4914-b59c-675c80130fe2">
+                      <SHORT-NAME>ADT_ActvRetMotTrq</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_MMOT</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetMotTrq</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="67dda56d-73a1-417f-8a38-386a486aca14">
+                      <SHORT-NAME>ADT_ActvRetMotTrqSatn</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_MMOT</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetMotTrqSatn</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="98f0091a-c69e-4871-ad2b-f93a22236a4d">
+                      <SHORT-NAME>ADT_ActvRetMaxMotTrqMin</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_MMOT</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetMaxMotTrqMin</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="9b493844-1745-40d3-95c1-53ecd4aaf269">
+                      <SHORT-NAME>ADT_ActvRetAbsSteerAngSat</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_SA_10</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetAbsSteerAngSat</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="d9eb14c1-14d3-4be2-8df6-3408f00a52eb">
+                      <SHORT-NAME>ADT_ActvRetAbsTorsBarTrqSat</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_TBTHIGH</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetAbsTorsBarTrqSat</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="6d28a3c9-6c28-46fb-8b45-ac7453efa309">
+                      <SHORT-NAME>ADT_ActvRetAbsMaxSafeVehSpdSat</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/CompuMethods/CM_VFZHIGH</COMPU-METHOD-REF>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturn_L_Adapter/DataConstraints/DC_AbsMaxSafeVehSpd</DATA-CONSTR-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="5bb95d78-e3d6-479c-874f-db0e3f134134">
+                      <SHORT-NAME>ADT_MonStatus</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="909a91e9-ce8a-4c85-bad4-d04b83a20c05">
+                      <SHORT-NAME>ADT_MonID</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                    <APPLICATION-PRIMITIVE-DATA-TYPE UUID="6a249909-a7c1-48a0-8a6e-59d8f9d48c28">
+                      <SHORT-NAME>ADT_PrestoreData</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                    </APPLICATION-PRIMITIVE-DATA-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="3072e980-f687-49b0-b0db-903a3399b27d">
+                  <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+                  <ELEMENTS>
+                    <IMPLEMENTATION-DATA-TYPE UUID="cdf32c28-661b-4bb4-9d72-487be9535846">
+                      <SHORT-NAME>IDT_ActvRetDi</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetDi</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>255</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="e9bae95d-993e-4822-b150-3b0ab60edc54">
+                      <SHORT-NAME>IDT_ActvRetMotTrq</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetMotTrq</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>32767</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="48592b47-d2f9-43b4-92f8-518691332eb5">
+                      <SHORT-NAME>IDT_ActvRetMotTrqSatn</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetMotTrqSatn</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <INVALID-VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>Value</SHORT-LABEL>
+                                <VALUE>32767</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </INVALID-VALUE>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="ee805137-5f74-4455-9ead-64509dcc9909">
+                      <SHORT-NAME>IDT_ActvRetAbsTorsBarTrqSat</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetAbsTorsBarTrqSat</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="f0947350-ea85-4b60-80d2-0a5c4a918d80">
+                      <SHORT-NAME>IDT_ActvRetMaxMotTrqMin</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetMaxMotTrqMin</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="f4ec0cbb-0dd4-4627-9f96-78309c515968">
+                      <SHORT-NAME>IDT_ActvRetAbsSteerAngSat</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/Eps_Repository/ActiveReturn/ActiveReturnCheck/DataConstraints/DC_ActvRetAbsSteerAngSat</DATA-CONSTR-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="08279ea2-03b2-4bd7-9c23-86c47f7400c0">
+                      <SHORT-NAME>IDT_MonID</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="1b54052c-4a5e-4a0b-b640-250d5967a078">
+                      <SHORT-NAME>IDT_MonStatus</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="28108bbc-ff62-489d-bd7e-05ebcda9aab6">
+                      <SHORT-NAME>IDT_PrestoreData</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="cf8ce819-c722-4152-82e8-0ac89a3bb735">
+                  <SHORT-NAME>DataConstraints</SHORT-NAME>
+                  <ELEMENTS>
+                    <DATA-CONSTR UUID="eb9bec14-42f8-4cfc-8c3b-197eb1c651aa">
+                      <SHORT-NAME>DC_ActvRetDi</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>1</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>1</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="816e1865-8e83-4d43-bec4-8e954312dfa1">
+                      <SHORT-NAME>DC_ActvRetMotTrq</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>-3</LOWER-LIMIT>
+                            <UPPER-LIMIT>3</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>-3072</LOWER-LIMIT>
+                            <UPPER-LIMIT>3072</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="3454c9e0-cc08-41b3-865e-d73ab53159f6">
+                      <SHORT-NAME>DC_ActvRetMotTrqSatn</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>-3</LOWER-LIMIT>
+                            <UPPER-LIMIT>3</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>-3072</LOWER-LIMIT>
+                            <UPPER-LIMIT>3072</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="2221ba74-110a-4760-b0f3-7612fa8ac0de">
+                      <SHORT-NAME>DC_ActvRetAbsTorsBarTrqSat</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>25</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>25600</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="f31e8776-0870-41cf-af75-9506ecc2d880">
+                      <SHORT-NAME>DC_ActvRetMaxMotTrqMin</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>3</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>3072</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="e0f16e6b-ee2c-4a11-8b5a-a2d754f011f1">
+                      <SHORT-NAME>DC_ActvRetAbsSteerAngSat</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <CONSTR-LEVEL>0</CONSTR-LEVEL>
+                          <PHYS-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>1000</UPPER-LIMIT>
+                          </PHYS-CONSTRS>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT>0</LOWER-LIMIT>
+                            <UPPER-LIMIT>10000</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="7debb394-a28d-477b-a121-7913af12301c">
+                  <SHORT-NAME>SWAddrMethod</SHORT-NAME>
+                  <ELEMENTS>
+                    <SW-ADDR-METHOD UUID="96b8fc4a-c447-4fd5-ada3-09b68473eceb">
+                      <SHORT-NAME>DAMOS_RAM_DTA</SHORT-NAME>
+                      <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                      <SECTION-INITIALIZATION-POLICY>INIT</SECTION-INITIALIZATION-POLICY>
+                      <SECTION-TYPE>VAR</SECTION-TYPE>
+                    </SW-ADDR-METHOD>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>ActiveReturn_L_Adapter</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>Interfaces</SHORT-NAME>
+                  <ELEMENTS>
+                    <CLIENT-SERVER-INTERFACE UUID="60caa055-cbb4-4ced-ae35-c4fcda79d31e">
+                      <SHORT-NAME>IF_ActvRetDiagData</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="fb956f54-abd5-4b37-b6a2-93401fd34ae1">
+                          <SHORT-NAME>Set_ActvRetDiagData</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="1bdcd2b2-938f-4c29-874a-09efae3edcd9">
+                              <SHORT-NAME>ActvRetMotTrqSatn</SHORT-NAME>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetMotTrqSatn</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                              <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="0e12bd75-999b-45c2-b758-deece848dc29">
+                              <SHORT-NAME>ActvRetAbsTorsBarTrqMon</SHORT-NAME>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetAbsTorsBarTrqSat</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                              <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="29b5ed45-680c-48f4-bb33-f805ce05a26c">
+                              <SHORT-NAME>ActvRetAbsMaxSafeVehSpdMon</SHORT-NAME>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetAbsMaxSafeVehSpdSat</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                              <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="c22fef29-fada-49bf-9c67-d89ab2d515a8">
+                              <SHORT-NAME>ActvRetAbsSteerAngMon</SHORT-NAME>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_ActvRetAbsSteerAngSat</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                              <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                      </OPERATIONS>
+                    </CLIENT-SERVER-INTERFACE>
+                    <CLIENT-SERVER-INTERFACE UUID="d3dd7948-0e60-487c-80b7-4f9c8e126b9f">
+                      <SHORT-NAME>IF_ActvRetSetEveEntry</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <OPERATIONS>
+                        <CLIENT-SERVER-OPERATION UUID="8fa6e29d-0ab1-42fe-9438-20433923e729">
+                          <SHORT-NAME>Set_ActvRetEntry</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="8ed7e9dd-8c1f-4f10-9320-a99ce2087108">
+                              <SHORT-NAME>MonStatus_Val</SHORT-NAME>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_MonStatus</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                              <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="00a23fa0-7a34-442a-ba6e-fcd1d7daee87">
+                              <SHORT-NAME>MonID_Val</SHORT-NAME>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_MonID</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                              <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="a8e87a5d-5ba0-4954-8210-837e6649b9c8">
+                              <SHORT-NAME>PrestoreData_Val</SHORT-NAME>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/Eps_Repository/ActiveReturn/ActiveReturnCheck/ApplicationDataTypes/ADT_PrestoreData</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                              <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                        </CLIENT-SERVER-OPERATION>
+                      </OPERATIONS>
+                    </CLIENT-SERVER-INTERFACE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

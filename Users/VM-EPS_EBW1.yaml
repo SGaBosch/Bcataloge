@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: Ram Kumar Ram
+  name: Ram-Kumar-Ram
 spec:
   profile:
     displayName: Ram Kumar Ram (VM-EPS/EBW1)

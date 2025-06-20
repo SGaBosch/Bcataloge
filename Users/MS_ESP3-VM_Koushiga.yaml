@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: Koushiga Nanthini Marichamy Thangavel
+  name: Koushiga-Nanthini-Marichamy-Thangavel
 spec:
   profile:
     displayName: Koushiga Nanthini Marichamy Thangavel (MS/ESP3-VM)

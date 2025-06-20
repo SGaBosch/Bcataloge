@@ -2,7 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ActiveReturn_L_Adapter
-  description: 
+  description: ActiveReturn_L_Adapter is a component that acts as an interface or adapter layer for the ActiveReturn functionality.
+    It is responsible for adapting signals or data structures between ActiveReturn and other system components as needed.
 spec:
   type: service
   lifecycle: production

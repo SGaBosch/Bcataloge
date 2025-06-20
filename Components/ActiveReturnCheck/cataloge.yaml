@@ -8,6 +8,8 @@ metadata:
     Provides safety limitation of the calculated motor torque depending on vehicle speed and steering angle.
     If an invalid input signal is detected, the substitution value is chosen to take the lowest value of the appropriate curve.
     Calibration parameters are provided by the ActiveReturnCdp component.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   lifecycle: production

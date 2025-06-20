@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Bcataloge
+  annotations:
+    github.com/project-slug: SGaBosch/Bcataloge
+spec:
+  type: other
+  lifecycle: unknown
+  owner: steering-functions-4
